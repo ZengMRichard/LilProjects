@@ -1,0 +1,133 @@
+[
+  { "input": "", "expect": { "kind": "empty" } },
+  { "input": "   ", "expect": { "kind": "empty" } },
+  {
+    "input": "AAPL US EQUITY",
+    "expect": { "kind": "invocation", "security": "AAPL US", "sector": "EQUITY", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "aapl us eq chrt 5y",
+    "expect": { "kind": "invocation", "security": "AAPL US", "sector": "EQUITY", "code": "CHRT", "positional": ["5Y"], "named": {} }
+  },
+  {
+    "input": "AAPL US EQUITY CHRT 5Y",
+    "expect": { "kind": "invocation", "security": "AAPL US", "sector": "EQUITY", "code": "CHRT", "positional": ["5Y"], "named": {} }
+  },
+  {
+    "input": "CHRT vs=\"MSFT US EQ, SPY US EQ\"",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "CHRT", "positional": [], "named": { "vs": "MSFT US EQ, SPY US EQ" } }
+  },
+  {
+    "input": "CHRT 5Y",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "CHRT", "positional": ["5Y"], "named": {} }
+  },
+  {
+    "input": "FIN freq=1q",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "FIN", "positional": [], "named": { "freq": "1Q" } }
+  },
+  {
+    "input": "EURUSD FX CHRT 1Y",
+    "expect": { "kind": "invocation", "security": "EURUSD", "sector": "CURNCY", "code": "CHRT", "positional": ["1Y"], "named": {} }
+  },
+  {
+    "input": "UNRATE EC",
+    "expect": { "kind": "invocation", "security": "UNRATE", "sector": "ECON", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "US GV",
+    "expect": { "kind": "invocation", "security": "US", "sector": "GOVT", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "WTI CM CHRT",
+    "expect": { "kind": "invocation", "security": "WTI", "sector": "CMDTY", "code": "CHRT", "positional": [], "named": {} }
+  },
+  {
+    "input": "ECAL country=US",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "ECAL", "positional": [], "named": { "country": "US" } }
+  },
+  { "input": "3", "expect": { "kind": "hotlink", "n": 3 } },
+  { "input": " 12 ", "expect": { "kind": "hotlink", "n": 12 } },
+  { "input": "apple", "expect": { "kind": "search", "text": "APPLE" } },
+  { "input": "AAPL", "expect": { "kind": "search", "text": "AAPL" } },
+  { "input": "apple   inc", "expect": { "kind": "search", "text": "APPLE INC" } },
+  {
+    "input": "ECON inflation",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "ECON", "positional": ["INFLATION"], "named": {} }
+  },
+  {
+    "input": "DESC",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "DESC", "positional": [], "named": {} }
+  },
+  {
+    "input": "help yield",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "HELP", "positional": ["YIELD"], "named": {} }
+  },
+  {
+    "input": "PX 1Y",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "CHRT", "positional": ["1Y"], "named": {} }
+  },
+  {
+    "input": "MSFT US STK PX",
+    "expect": { "kind": "invocation", "security": "MSFT US", "sector": "EQUITY", "code": "CHRT", "positional": [], "named": {} }
+  },
+  {
+    "input": "OIL CHRT 5Y",
+    "expect": { "kind": "invocation", "security": "WTI", "sector": "CMDTY", "code": "CHRT", "positional": ["5Y"], "named": {} }
+  },
+  {
+    "input": "tens",
+    "expect": { "kind": "invocation", "security": "UST10Y", "sector": "GOVT", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "BTCUSD CR HIST freq=1w",
+    "expect": { "kind": "invocation", "security": "BTCUSD", "sector": "CRYPTO", "code": "HIST", "positional": [], "named": { "freq": "1W" } }
+  },
+  {
+    "input": "AAPL US EQUITY CHRT 1Y style=candle study=sma20,bb20",
+    "expect": { "kind": "invocation", "security": "AAPL US", "sector": "EQUITY", "code": "CHRT", "positional": ["1Y"], "named": { "style": "CANDLE", "study": "SMA20,BB20" } }
+  },
+  {
+    "input": "WMON list=core",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "WMON", "positional": [], "named": { "list": "CORE" } }
+  },
+  {
+    "input": "WMON list=\"My Tech\"",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "WMON", "positional": [], "named": { "list": "My Tech" } }
+  },
+  {
+    "input": "SPX INDEX",
+    "expect": { "kind": "invocation", "security": "SPX", "sector": "INDEX", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "EQUITY",
+    "expect": { "kind": "search", "text": "EQUITY" }
+  },
+  {
+    "input": "DESC US EQUITY",
+    "expect": { "kind": "invocation", "security": "DESC US", "sector": "EQUITY", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "IBM US EQUITY HIST start=2024-01-01 end=2024-06-30",
+    "expect": { "kind": "invocation", "security": "IBM US", "sector": "EQUITY", "code": "HIST", "positional": [], "named": { "start": "2024-01-01", "end": "2024-06-30" } }
+  },
+  {
+    "input": "AAPL US EQUITY FX",
+    "expect": { "kind": "invocation", "security": "AAPL US EQUITY", "sector": "CURNCY", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "CORP",
+    "expect": { "kind": "search", "text": "CORP" }
+  },
+  {
+    "input": "GE CORP",
+    "expect": { "kind": "invocation", "security": "GE", "sector": "CORP", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "ABC MUNI",
+    "expect": { "kind": "invocation", "security": "ABC", "sector": "MUNI", "code": null, "positional": [], "named": {} }
+  },
+  {
+    "input": "HIST period=5Y freq=1mo ccy=eur",
+    "expect": { "kind": "invocation", "security": null, "sector": null, "code": "HIST", "positional": [], "named": { "period": "5Y", "freq": "1MO", "ccy": "EUR" } }
+  }
+]

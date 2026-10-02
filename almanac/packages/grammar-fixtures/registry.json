@@ -1,0 +1,14 @@
+{
+  "_comment": "Context shared by every grammar fixture: the registered function codes and the user aliases in effect. Both the TypeScript and Python parsers load this file.",
+  "codes": [
+    "HELP", "RECENT", "DESC", "CHRT", "HIST", "WMON",
+    "FIN", "FILE", "ECON", "ECAL", "CURV", "FXM", "FIELD",
+    "NEWS", "WIDX", "HEAT", "MOVR", "PEER", "SCRN", "DIV", "RET", "NRGY", "CMDY", "ALERT", "WKSP",
+    "OPT", "BOND", "RATE", "BOOK", "ASK"
+  ],
+  "aliases": {
+    "functions": { "PX": "CHRT" },
+    "sectors": { "STK": "EQUITY" },
+    "securities": { "OIL": "WTI CMDTY", "TENS": "UST10Y GOVT" }
+  }
+}

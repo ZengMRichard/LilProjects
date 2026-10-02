@@ -1,0 +1,11 @@
+{
+  "_comment": "Dependencies whose license is permissive but outside the spec's literal allowlist (MIT, BSD, ISC, Apache-2.0, MPL-2.0, public domain; SIL OFL for fonts). Each needs the human owner's approval; until then the checkers print them as warnings. See docs/DECISIONS.md D-008.",
+  "python": {
+    "numpy": { "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0", "why": "Direct dependency for the seeded demo price generator; the Zlib part covers bundled code. Zlib is permissive.", "status": "pending human approval" },
+    "typing_extensions": { "license": "PSF-2.0", "why": "Transitive dependency of FastAPI and Pydantic; cannot be removed without dropping them. PSF-2.0 is permissive.", "status": "pending human approval" }
+  },
+  "npm": {
+    "argparse": { "license": "Python-2.0", "why": "Dev-only, transitive (via the Playwright/Biome toolchain); not shipped in the web bundle.", "status": "pending human approval" },
+    "@csstools/css-syntax-patches-for-csstree": { "license": "MIT-0", "why": "Dev-only, transitive via jsdom for unit tests; MIT-0 is MIT without the attribution clause.", "status": "pending human approval" }
+  }
+}

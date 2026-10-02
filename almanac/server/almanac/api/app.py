@@ -233,7 +233,11 @@ def create_app(
     @app.get("/v1/state/{kind}", response_model=dict[str, Any])
     async def get_state(kind: str) -> dict[str, Any]:
         _check_kind(kind)
-        return store.get_state(kind)
+        state = store.get_state(kind)
+        if kind == "aliases":
+            # ~/.almanac/aliases.toml is the user's file; its sections win over stored ones.
+            state |= load_aliases(settings.home / "aliases.toml")
+        return state
 
     @app.put("/v1/state/{kind}", response_model=dict[str, Any])
     async def put_state(kind: str, body: StatePut) -> dict[str, Any]:
@@ -286,6 +290,23 @@ def create_app(
         )
 
     return app
+
+
+def load_aliases(path: Path) -> dict[str, dict[str, str]]:
+    """Read [functions], [sectors] and [securities] tables of personal shortcuts."""
+    if not path.exists():
+        return {}
+    import tomllib
+
+    try:
+        data = tomllib.loads(path.read_text())
+    except tomllib.TOMLDecodeError:
+        return {}
+    return {
+        section: {str(k).upper(): str(v) for k, v in data.get(section, {}).items()}
+        for section in ("functions", "sectors", "securities")
+        if isinstance(data.get(section), dict)
+    }
 
 
 def _check_kind(kind: str) -> None:

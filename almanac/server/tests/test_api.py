@@ -229,3 +229,15 @@ def test_stream_sub_ack_tick_pong(app):
             if msg["op"] == "pong":
                 break
         assert msg == {"op": "pong", "t": 123}
+
+
+def test_aliases_toml_is_served(settings, app, client):
+    (settings.home / "aliases.toml").write_text(
+        '[functions]\nPX = "CHRT"\n\n[sectors]\nSTK = "EQUITY"\n\n[securities]\nOIL = "WTI CMDTY"\n'
+    )
+    got = client.get("/v1/state/aliases").json()
+    assert got == {
+        "functions": {"PX": "CHRT"},
+        "sectors": {"STK": "EQUITY"},
+        "securities": {"OIL": "WTI CMDTY"},
+    }

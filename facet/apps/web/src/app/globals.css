@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+/* Facet design tokens: true black surfaces, one powder-blue hue, hairline structure. */
+@theme {
+  --color-ink-950: #000000;
+  --color-ink-900: #05070a;
+  --color-ink-850: #080b0f;
+  --color-ink-800: #0b0f14;
+  --color-ink-700: #11161d;
+  --color-ink-600: #1a212b;
+  --color-ink-500: #27303c;
+
+  --color-fg: #eef4f9;
+  --color-fg-2: #a9b8c6;
+  --color-fg-3: #7d8c9b;
+
+  --color-powder-50: #eef7fd;
+  --color-powder-100: #dbeefb;
+  --color-powder-200: #c3e2f7;
+  --color-powder-300: #a8d3f2;
+  --color-powder-400: #86bfe8;
+  --color-powder-500: #64a4d6;
+  --color-powder-600: #4a86b8;
+  --color-powder-700: #386993;
+  --color-powder-800: #284c6b;
+  --color-powder-900: #1a3147;
+  --color-powder-950: #0f1d2b;
+
+  --color-line: rgb(168 211 242 / 0.1);
+  --color-line-2: rgb(168 211 242 / 0.18);
+  --color-line-3: rgb(168 211 242 / 0.32);
+
+  /* Status is reserved for capture checks and destructive actions, never for results. */
+  --color-good: #7fd6b0;
+  --color-warn: #f0c36a;
+  --color-bad: #f29b8f;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-ink-950);
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-ink-950);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgb(168 211 242 / 0.3);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-powder-300);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  input,
+  textarea,
+  select {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-powder-300);
+  }
+
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  .card {
+    position: relative;
+    border: 1px solid var(--color-line);
+    border-radius: 1.125rem;
+    background:
+      linear-gradient(180deg, rgb(168 211 242 / 0.035), rgb(168 211 242 / 0.01)), var(--color-ink-900);
+  }
+
+  .card-raised {
+    border-color: var(--color-line-2);
+    background:
+      radial-gradient(120% 80% at 50% -20%, rgb(168 211 242 / 0.1), transparent 60%), var(--color-ink-850);
+    box-shadow: 0 30px 80px -40px rgb(100 164 214 / 0.35);
+  }
+
+  .hairline {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-line-2), transparent);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.75rem;
+    padding-inline: 1.25rem;
+    border-radius: 999px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    transition:
+      background-color 160ms var(--ease-out-soft),
+      border-color 160ms var(--ease-out-soft),
+      color 160ms var(--ease-out-soft),
+      box-shadow 160ms var(--ease-out-soft),
+      transform 160ms var(--ease-out-soft);
+  }
+
+  .btn:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  .btn:disabled {
+    opacity: 0.45;
+  }
+
+  .btn-sm {
+    height: 2.25rem;
+    padding-inline: 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .btn-primary {
+    background: var(--color-powder-300);
+    color: #03121d;
+    box-shadow:
+      0 0 0 1px rgb(168 211 242 / 0.4),
+      0 10px 40px -10px rgb(134 191 232 / 0.6);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: var(--color-powder-200);
+    box-shadow:
+      0 0 0 1px rgb(195 226 247 / 0.6),
+      0 14px 50px -10px rgb(134 191 232 / 0.75);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--color-line-2);
+    background: rgb(168 211 242 / 0.04);
+    color: var(--color-fg);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    border-color: var(--color-line-3);
+    background: rgb(168 211 242 / 0.09);
+  }
+
+  .btn-ghost {
+    color: var(--color-fg-2);
+  }
+
+  .btn-ghost:hover:not(:disabled) {
+    color: var(--color-fg);
+    background: rgb(168 211 242 / 0.06);
+  }
+
+  .btn-danger {
+    border: 1px solid rgb(242 155 143 / 0.35);
+    color: var(--color-bad);
+  }
+
+  .btn-danger:hover:not(:disabled) {
+    background: rgb(242 155 143 / 0.08);
+    border-color: rgb(242 155 143 / 0.6);
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    height: 1.5rem;
+    padding-inline: 0.625rem;
+    border: 1px solid var(--color-line-2);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    color: var(--color-fg-2);
+    white-space: nowrap;
+  }
+
+  .pill-accent {
+    border-color: rgb(168 211 242 / 0.4);
+    background: rgb(168 211 242 / 0.08);
+    color: var(--color-powder-200);
+  }
+
+  .field {
+    width: 100%;
+    height: 2.875rem;
+    padding-inline: 0.875rem;
+    border: 1px solid var(--color-line-2);
+    border-radius: 0.75rem;
+    background: var(--color-ink-900);
+    color: var(--color-fg);
+    font-size: 0.9375rem;
+    transition:
+      border-color 160ms,
+      box-shadow 160ms;
+  }
+
+  .field::placeholder {
+    color: var(--color-fg-3);
+  }
+
+  .field:focus {
+    outline: none;
+    border-color: var(--color-powder-400);
+    box-shadow: 0 0 0 4px rgb(168 211 242 / 0.12);
+  }
+
+  textarea.field {
+    height: auto;
+    padding-block: 0.75rem;
+    resize: vertical;
+  }
+
+  .link {
+    color: var(--color-powder-300);
+    text-decoration: underline;
+    text-decoration-color: rgb(168 211 242 / 0.35);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 160ms;
+  }
+
+  .link:hover {
+    text-decoration-color: var(--color-powder-300);
+  }
+
+  /* Fine measurement grid used behind hero and capture surfaces. */
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgb(168 211 242 / 0.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(168 211 242 / 0.055) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, #000 30%, transparent 78%);
+  }
+
+  .glow-top::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(60% 50% at 50% 0%, rgb(134 191 232 / 0.2), transparent 70%);
+  }
+
+  .skeleton {
+    border-radius: 0.75rem;
+    background: linear-gradient(
+      90deg,
+      rgb(168 211 242 / 0.04),
+      rgb(168 211 242 / 0.09),
+      rgb(168 211 242 / 0.04)
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.6s linear infinite;
+  }
+
+  .rise {
+    animation: rise 700ms var(--ease-out-soft) both;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* One design, two outputs: the PDF is this same report, printed with its colours intact. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+  }
+
+  .card-raised {
+    box-shadow: none;
+  }
+}

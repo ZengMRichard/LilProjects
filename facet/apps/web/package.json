@@ -1,0 +1,40 @@
+{
+  "name": "facet-web",
+  "private": true,
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "sync:models": "node scripts/sync-mediapipe.mjs",
+    "predev": "node scripts/sync-mediapipe.mjs",
+    "dev": "next dev -p 3000",
+    "prebuild": "node scripts/sync-mediapipe.mjs",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "check": "tsc --noEmit && biome check src e2e scripts",
+    "format": "biome check --write src e2e scripts",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "gen:api": "cd ../.. && uv run facet openapi apps/web/openapi.json && cd apps/web && openapi-typescript openapi.json -o src/lib/api/schema.d.ts && rm openapi.json"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.2.3",
+    "@tanstack/react-query": "^5.107.1",
+    "geist": "^1.9.2",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.7",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "openapi-typescript": "^7.13.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "facet-monorepo",
+  "private": true,
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.28.0",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "pnpm -C apps/web build",
+    "test": "uv run pytest && pnpm -C apps/web test",
+    "check": "uv run ruff check . && uv run ruff format --check . && uv run pyright && pnpm -C apps/web check"
+  }
+}

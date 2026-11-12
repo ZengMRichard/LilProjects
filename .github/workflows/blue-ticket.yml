@@ -1,0 +1,55 @@
+name: blue-ticket
+
+on:
+  push:
+    paths: ["dc-dem-internships/**", ".github/workflows/blue-ticket.yml"]
+  pull_request:
+    paths: ["dc-dem-internships/**", ".github/workflows/blue-ticket.yml"]
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Scrape again and commit the refreshed data"
+        type: boolean
+        default: true
+
+defaults:
+  run:
+    working-directory: dc-dem-internships
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Text and date rules
+        run: node scraper/test.js
+      - name: Build the page from the committed data
+        run: node build.js
+
+  refresh:
+    if: github.event_name == 'workflow_dispatch' && inputs.refresh
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install pdftotext
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Scrape
+        run: node scraper/run.js
+      - name: Build
+        run: node build.js
+      - name: Commit the refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/internships.json site/index.html
+          git diff --cached --quiet || git commit -m "Refresh internship data"
+          git push

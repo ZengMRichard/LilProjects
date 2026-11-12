@@ -1,0 +1,1638 @@
+{
+ "chci": {
+  "id": "chci",
+  "homeStatus": 200,
+  "careersUrl": "https://chci.org/career-opportunities/",
+  "internUrl": "https://chci.org/programs/congressional-internship-program/",
+  "ats": [
+   {
+    "type": "bamboohr",
+    "token": "chci"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:06.260Z",
+  "notes": []
+ },
+ "cbcf": {
+  "id": "cbcf",
+  "homeStatus": 200,
+  "careersUrl": "https://www.cbcfinc.org/engage-with-us/get-involved/",
+  "internUrl": "https://www.cbcfinc.org/programs/internships/",
+  "ats": [
+   {
+    "type": "academicworks",
+    "token": "cbcfinc"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:06.273Z",
+  "notes": []
+ },
+ "apaics": {
+  "id": "apaics",
+  "homeStatus": 200,
+  "careersUrl": "https://www.apaics.org/job-opportunities",
+  "internUrl": "https://www.apaics.org/congressional-internship",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:06.275Z",
+  "notes": []
+ },
+ "victory-institute": {
+  "id": "victory-institute",
+  "homeStatus": 200,
+  "careersUrl": "https://victoryinstitute.org/about/career-opportunities/",
+  "internUrl": "https://victoryinstitute.org/programs/victory-congressional-internship/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:06.276Z",
+  "notes": []
+ },
+ "cpc-center": {
+  "id": "cpc-center",
+  "homeStatus": 200,
+  "careersUrl": "https://webuildprogress.org/jobs",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "jazzhr",
+    "token": "nrgconsultinggroup"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:06.277Z",
+  "notes": []
+ },
+ "college-to-congress": {
+  "id": "college-to-congress",
+  "homeStatus": 200,
+  "careersUrl": "https://www.collegetocongress.org/",
+  "internUrl": "https://www.collegetocongress.org/capitol-internship.html",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:06.277Z",
+  "notes": []
+ },
+ "running-start": {
+  "id": "running-start",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": "https://www.runningstart.org/congressional-fellowship",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:06.278Z",
+  "notes": []
+ },
+ "pay-our-interns": {
+  "id": "pay-our-interns",
+  "homeStatus": 200,
+  "careersUrl": "https://payourinterns.org/jobs",
+  "internUrl": "https://payourinterns.org/nou-internship-opportunity-fund",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:06.278Z",
+  "notes": []
+ },
+ "senate-dems": {
+  "id": "senate-dems",
+  "homeStatus": 200,
+  "careersUrl": "https://www.senate.gov/employment/po/positions.htm",
+  "internUrl": "https://www.democrats.senate.gov/senate-democrats-internship-opportunities",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.342Z",
+  "notes": []
+ },
+ "senate-diversity": {
+  "id": "senate-diversity",
+  "homeStatus": 200,
+  "careersUrl": "https://www.senate.gov/employment/po/positions.htm",
+  "internUrl": "https://www.democrats.senate.gov/about-senate-dems/diversity-initiative",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.364Z",
+  "notes": []
+ },
+ "house-dem-leader": {
+  "id": "house-dem-leader",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": "https://democraticleader.house.gov/internships",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.601Z",
+  "notes": []
+ },
+ "house-dem-caucus": {
+  "id": "house-dem-caucus",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.749Z",
+  "notes": []
+ },
+ "new-dems": {
+  "id": "new-dems",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": "https://newdemocratcoalition.house.gov/resume-bank",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.896Z",
+  "notes": []
+ },
+ "cpc": {
+  "id": "cpc",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:07.939Z",
+  "notes": []
+ },
+ "dnc": {
+  "id": "dnc",
+  "homeStatus": 200,
+  "careersUrl": "https://democrats.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:08.430Z",
+  "notes": []
+ },
+ "dccc": {
+  "id": "dccc",
+  "homeStatus": 200,
+  "careersUrl": "https://dccc.org/jobs/",
+  "internUrl": "https://dccc.org/internships/",
+  "ats": [
+   {
+    "type": "paylocity",
+    "token": "4644/DCCC"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:08.445Z",
+  "notes": []
+ },
+ "dscc": {
+  "id": "dscc",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:08.603Z",
+  "notes": []
+ },
+ "dga": {
+  "id": "dga",
+  "homeStatus": 200,
+  "careersUrl": "https://jobs.lever.co/dga",
+  "internUrl": "https://jobs.lever.co/dga",
+  "ats": [
+   {
+    "type": "lever",
+    "token": "dga"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:08.736Z",
+  "notes": []
+ },
+ "dlcc": {
+  "id": "dlcc",
+  "homeStatus": 200,
+  "careersUrl": "https://www.dlcc.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:08.801Z",
+  "notes": []
+ },
+ "daga": {
+  "id": "daga",
+  "homeStatus": 200,
+  "careersUrl": "https://dems.ag/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "daga"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:08.836Z",
+  "notes": []
+ },
+ "dass": {
+  "id": "dass",
+  "homeStatus": 200,
+  "careersUrl": "https://demsofstate.org/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:09.043Z",
+  "notes": []
+ },
+ "ndrc": {
+  "id": "ndrc",
+  "homeStatus": 200,
+  "careersUrl": "https://democraticredistricting.com/careers/",
+  "internUrl": "https://democraticredistricting.com/jobs/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:09.229Z",
+  "notes": []
+ },
+ "yda": {
+  "id": "yda",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:09.346Z",
+  "notes": []
+ },
+ "hmp": {
+  "id": "hmp",
+  "homeStatus": 200,
+  "careersUrl": "https://jobs.lever.co/thehousemajoritypac",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "lever",
+    "token": "thehousemajoritypac"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:09.499Z",
+  "notes": []
+ },
+ "smp": {
+  "id": "smp",
+  "homeStatus": 200,
+  "careersUrl": "https://senatemajority.com/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:09.614Z",
+  "notes": []
+ },
+ "american-bridge": {
+  "id": "american-bridge",
+  "homeStatus": 200,
+  "careersUrl": "https://americanbridgepac.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:09.821Z",
+  "notes": []
+ },
+ "priorities": {
+  "id": "priorities",
+  "homeStatus": 200,
+  "careersUrl": "https://priorities.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:10.113Z",
+  "notes": []
+ },
+ "emilys-list": {
+  "id": "emilys-list",
+  "homeStatus": 200,
+  "careersUrl": "https://emilyslist.org/careers/",
+  "internUrl": "https://emilyslist.org/internships/",
+  "ats": [
+   {
+    "type": "lever",
+    "token": "emilyslist"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:10.241Z",
+  "notes": []
+ },
+ "ndtc": {
+  "id": "ndtc",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:10.302Z",
+  "notes": []
+ },
+ "arena": {
+  "id": "arena",
+  "homeStatus": 200,
+  "careersUrl": "https://arena.run/arena-careers-premium-services",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "getro",
+    "token": "careers.arena.run"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:10.371Z",
+  "notes": []
+ },
+ "actblue": {
+  "id": "actblue",
+  "homeStatus": 200,
+  "careersUrl": "https://www.actblue.com/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:10.407Z",
+  "notes": []
+ },
+ "run-for-something": {
+  "id": "run-for-something",
+  "homeStatus": 200,
+  "careersUrl": "https://runforsomething.net/about/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:10.454Z",
+  "notes": []
+ },
+ "swing-left": {
+  "id": "swing-left",
+  "homeStatus": 200,
+  "careersUrl": "https://swingleft.org/take-action",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:10.810Z",
+  "notes": []
+ },
+ "america-votes": {
+  "id": "america-votes",
+  "homeStatus": 200,
+  "careersUrl": "https://americavotes.isolvedhire.com/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "isolved",
+    "token": "americavotes"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:11.030Z",
+  "notes": []
+ },
+ "emerge": {
+  "id": "emerge",
+  "homeStatus": 200,
+  "careersUrl": "https://emergeamerica.org/get-involved/careers-at-emerge/",
+  "internUrl": "https://emergeamerica.org/get-involved/jobs-internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:11.155Z",
+  "notes": []
+ },
+ "victory-fund": {
+  "id": "victory-fund",
+  "homeStatus": 200,
+  "careersUrl": "https://victoryfund.org/about/career-opportunities/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:11.248Z",
+  "notes": []
+ },
+ "latino-victory": {
+  "id": "latino-victory",
+  "homeStatus": 200,
+  "careersUrl": "https://latinovictory.org/sponsorship-opportunities/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:11.259Z",
+  "notes": []
+ },
+ "cap": {
+  "id": "cap",
+  "homeStatus": 200,
+  "careersUrl": "https://www.americanprogress.org/about-us/jobs/",
+  "internUrl": "https://www.americanprogress.org/about-us/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:11.489Z",
+  "notes": []
+ },
+ "third-way": {
+  "id": "third-way",
+  "homeStatus": 200,
+  "careersUrl": "https://www.thirdway.org/careers",
+  "internUrl": "https://www.thirdway.org/careers",
+  "ats": [
+   {
+    "type": "recruitee",
+    "token": "thirdway"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:11.860Z",
+  "notes": []
+ },
+ "brookings": {
+  "id": "brookings",
+  "homeStatus": 200,
+  "careersUrl": "https://www.brookings.edu/careers/",
+  "internUrl": "https://www.brookings.edu/careers/internships/",
+  "ats": [
+   {
+    "type": "icims",
+    "token": "careers-brookings"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:12.121Z",
+  "notes": []
+ },
+ "new-america": {
+  "id": "new-america",
+  "homeStatus": 200,
+  "careersUrl": "https://www.newamerica.org/careers/",
+  "internUrl": "https://www.newamerica.org/fellows/",
+  "ats": [
+   {
+    "type": "jazzhr",
+    "token": "newamerica"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:12.154Z",
+  "notes": []
+ },
+ "urban": {
+  "id": "urban",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:12.407Z",
+  "notes": []
+ },
+ "epi": {
+  "id": "epi",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:12.667Z",
+  "notes": []
+ },
+ "cbpp": {
+  "id": "cbpp",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.026Z",
+  "notes": [
+   "page https://www.cbpp.org/careers/intern: HTTP 403"
+  ]
+ },
+ "roosevelt": {
+  "id": "roosevelt",
+  "homeStatus": 200,
+  "careersUrl": "https://rooseveltinstitute.org/careers/",
+  "internUrl": "https://rooseveltinstitute.org/roosevelt-network/undergraduate-fellowships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.080Z",
+  "notes": []
+ },
+ "demos": {
+  "id": "demos",
+  "homeStatus": 200,
+  "careersUrl": "https://www.demos.org/about/careers",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.106Z",
+  "notes": []
+ },
+ "ppi": {
+  "id": "ppi",
+  "homeStatus": 200,
+  "careersUrl": "https://www.progressivepolicy.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.482Z",
+  "notes": []
+ },
+ "data-for-progress": {
+  "id": "data-for-progress",
+  "homeStatus": 200,
+  "careersUrl": "https://www.dataforprogress.org/jobs",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.672Z",
+  "notes": []
+ },
+ "equitable-growth": {
+  "id": "equitable-growth",
+  "homeStatus": 200,
+  "careersUrl": "https://equitablegrowth.org/issue/unemployment-insurance/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.735Z",
+  "notes": []
+ },
+ "groundwork": {
+  "id": "groundwork",
+  "homeStatus": 200,
+  "careersUrl": "https://groundworkcollaborative.org/join-us/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.752Z",
+  "notes": []
+ },
+ "cepr": {
+  "id": "cepr",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:13.844Z",
+  "notes": []
+ },
+ "ips": {
+  "id": "ips",
+  "homeStatus": 200,
+  "careersUrl": "https://ips-dc.org/careers-internships/",
+  "internUrl": "https://ips-dc.org/careers-internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:14.111Z",
+  "notes": []
+ },
+ "ndi": {
+  "id": "ndi",
+  "homeStatus": 200,
+  "careersUrl": "https://www.ndi.org/careers",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "rippling",
+    "token": "ndi_careers"
+   },
+   {
+    "type": "ukg",
+    "token": "NAT1051NDEM/JobBoard/79dbb2b6-6a4f-4628-a401-e37889b022fc"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:14.247Z",
+  "notes": []
+ },
+ "clasp": {
+  "id": "clasp",
+  "homeStatus": 200,
+  "careersUrl": "https://www.clasp.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:14.271Z",
+  "notes": []
+ },
+ "joint-center": {
+  "id": "joint-center",
+  "homeStatus": 200,
+  "careersUrl": "https://jointcenter.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:14.320Z",
+  "notes": []
+ },
+ "tcf": {
+  "id": "tcf",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:14.519Z",
+  "notes": []
+ },
+ "planned-parenthood": {
+  "id": "planned-parenthood",
+  "homeStatus": 200,
+  "careersUrl": "https://www.plannedparenthood.org/get-involved/jobs-and-volunteering",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "lever",
+    "token": "ppfa"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:14.908Z",
+  "notes": []
+ },
+ "reproductive-freedom": {
+  "id": "reproductive-freedom",
+  "homeStatus": 200,
+  "careersUrl": "https://reproductivefreedomforall.org/join-us/?ms=website",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.066Z",
+  "notes": []
+ },
+ "hrc": {
+  "id": "hrc",
+  "homeStatus": 200,
+  "careersUrl": "https://www.hrc.org/careers",
+  "internUrl": "https://www.hrc.org/who-we-are",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.123Z",
+  "notes": []
+ },
+ "lcv": {
+  "id": "lcv",
+  "homeStatus": 200,
+  "careersUrl": "https://www.lcv.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.128Z",
+  "notes": []
+ },
+ "sierra-club": {
+  "id": "sierra-club",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.242Z",
+  "notes": []
+ },
+ "everytown": {
+  "id": "everytown",
+  "homeStatus": 200,
+  "careersUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=575de07a-c083-4788-8cd8-24b17ba8cca5&ccId=19000101_000001&lang=en_US&selectedMenuKey=CareerCenter",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.543Z",
+  "notes": []
+ },
+ "giffords": {
+  "id": "giffords",
+  "homeStatus": 200,
+  "careersUrl": "https://giffords.org/take-action/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.550Z",
+  "notes": []
+ },
+ "brady": {
+  "id": "brady",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:15.923Z",
+  "notes": []
+ },
+ "march-for-our-lives": {
+  "id": "march-for-our-lives",
+  "homeStatus": 200,
+  "careersUrl": "https://marchforourlives.org/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:16.050Z",
+  "notes": []
+ },
+ "aclu": {
+  "id": "aclu",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:16.285Z",
+  "notes": []
+ },
+ "naacp": {
+  "id": "naacp",
+  "homeStatus": 200,
+  "careersUrl": "https://naacp.org/about/careers",
+  "internUrl": "https://naacp.org/find-resources/scholarships-awards-internships",
+  "ats": [
+   {
+    "type": "adp",
+    "token": "19000101"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:16.408Z",
+  "notes": []
+ },
+ "unidosus": {
+  "id": "unidosus",
+  "homeStatus": 200,
+  "careersUrl": "https://unidosus.org/about/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "unidosus"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:16.413Z",
+  "notes": []
+ },
+ "common-cause": {
+  "id": "common-cause",
+  "homeStatus": 200,
+  "careersUrl": "https://www.commoncause.org/about-us/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:16.761Z",
+  "notes": []
+ },
+ "public-citizen": {
+  "id": "public-citizen",
+  "homeStatus": 200,
+  "careersUrl": "https://www.citizen.org/about/careers/",
+  "internUrl": "https://www.citizen.org/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:16.828Z",
+  "notes": []
+ },
+ "crew": {
+  "id": "crew",
+  "homeStatus": 200,
+  "careersUrl": "https://www.citizensforethics.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:16.936Z",
+  "notes": []
+ },
+ "ecu": {
+  "id": "ecu",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.337Z",
+  "notes": []
+ },
+ "democracy-forward": {
+  "id": "democracy-forward",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.375Z",
+  "notes": []
+ },
+ "acs": {
+  "id": "acs",
+  "homeStatus": 200,
+  "careersUrl": "https://www.acslaw.org/video/acs-career-webinar-applying-to-jobs-on-the-hill/",
+  "internUrl": "https://www.acslaw.org/video/fellowships-101-how-to-secure-a-fellowship-and-make-the-most-of-it/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.527Z",
+  "notes": []
+ },
+ "pfaw": {
+  "id": "pfaw",
+  "homeStatus": 200,
+  "careersUrl": "https://www.peoplefor.org/careers-people-american-way",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.717Z",
+  "notes": []
+ },
+ "media-matters": {
+  "id": "media-matters",
+  "homeStatus": 200,
+  "careersUrl": "https://www.mediamatters.org/job-openings",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "bamboohr",
+    "token": "mmfa"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:17.758Z",
+  "notes": []
+ },
+ "demand-justice": {
+  "id": "demand-justice",
+  "homeStatus": 200,
+  "careersUrl": "https://demandjustice.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.840Z",
+  "notes": []
+ },
+ "afj": {
+  "id": "afj",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:17.927Z",
+  "notes": []
+ },
+ "leadership-conference": {
+  "id": "leadership-conference",
+  "homeStatus": 200,
+  "careersUrl": "https://civilrights.org/about/careers/",
+  "internUrl": "https://civilrights.org/about/careers/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:18.085Z",
+  "notes": []
+ },
+ "nwlc": {
+  "id": "nwlc",
+  "homeStatus": 200,
+  "careersUrl": "https://nwlc.org/jobs-at-nwlc/staff-positions/",
+  "internUrl": "https://nwlc.org/jobs-at-nwlc/internships/",
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "nationalwomenslawcenter"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:18.512Z",
+  "notes": []
+ },
+ "crr": {
+  "id": "crr",
+  "homeStatus": 200,
+  "careersUrl": "https://reproductiverights.org/about/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "paylocity",
+    "token": "7143ab74-eaab-46cb-9ce7-751d584db8dc/CENTER-FOR-REPRODUCTIVE-RIGHTS-INC"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:18.586Z",
+  "notes": []
+ },
+ "protect-democracy": {
+  "id": "protect-democracy",
+  "homeStatus": 200,
+  "careersUrl": "https://protectdemocracy.recruitee.com/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "recruitee",
+    "token": "protectdemocracy"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:18.739Z",
+  "notes": []
+ },
+ "american-oversight": {
+  "id": "american-oversight",
+  "homeStatus": 200,
+  "careersUrl": "https://americanoversight.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:18.780Z",
+  "notes": []
+ },
+ "accountable-us": {
+  "id": "accountable-us",
+  "homeStatus": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:18.863Z",
+  "notes": []
+ },
+ "color-of-change": {
+  "id": "color-of-change",
+  "homeStatus": 200,
+  "careersUrl": "https://colorofchange.org/about/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "rippling",
+    "token": "colorofchangeorg"
+   },
+   {
+    "type": "jazzhr",
+    "token": "larnellvickers"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:19.350Z",
+  "notes": []
+ },
+ "community-change": {
+  "id": "community-change",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:19.385Z",
+  "notes": []
+ },
+ "indivisible": {
+  "id": "indivisible",
+  "homeStatus": 200,
+  "careersUrl": "https://ats.rippling.com/indivisible-project-careers/jobs",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "rippling",
+    "token": "indivisible-project-careers"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:19.402Z",
+  "notes": []
+ },
+ "moveon": {
+  "id": "moveon",
+  "homeStatus": 200,
+  "careersUrl": "https://front.moveon.org/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "moveonorg"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:19.626Z",
+  "notes": []
+ },
+ "wfp": {
+  "id": "wfp",
+  "homeStatus": 200,
+  "careersUrl": "https://workingfamilies.org/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "lever",
+    "token": "workingfamilies"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:19.685Z",
+  "notes": []
+ },
+ "nextgen": {
+  "id": "nextgen",
+  "homeStatus": 200,
+  "careersUrl": "https://nextgenamerica.org/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:19.836Z",
+  "notes": []
+ },
+ "voto-latino": {
+  "id": "voto-latino",
+  "homeStatus": 200,
+  "careersUrl": "https://votolatino.org/about/careers/",
+  "internUrl": "https://votolatino.org/interns/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:20.194Z",
+  "notes": []
+ },
+ "sunrise": {
+  "id": "sunrise",
+  "homeStatus": 200,
+  "careersUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=eae2b250-e350-4195-850c-ce4ddea97369&ccId=19000101_000001&source=CC2&lang=en_US&selectedMenuKey=CareerCenter",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:20.330Z",
+  "notes": []
+ },
+ "evergreen": {
+  "id": "evergreen",
+  "homeStatus": 200,
+  "careersUrl": "https://www.evergreenaction.com/about/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "evergreenaction"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:20.355Z",
+  "notes": []
+ },
+ "climate-power": {
+  "id": "climate-power",
+  "homeStatus": 200,
+  "careersUrl": "https://climatepower.us/about/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "rippling",
+    "token": "climatepower"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:20.454Z",
+  "notes": []
+ },
+ "nrdc": {
+  "id": "nrdc",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:20.591Z",
+  "notes": []
+ },
+ "earthjustice": {
+  "id": "earthjustice",
+  "homeStatus": 200,
+  "careersUrl": "https://earthjustice.org/about/jobs",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "jobvite",
+    "token": "earthjustice"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:21.044Z",
+  "notes": []
+ },
+ "americas-voice": {
+  "id": "americas-voice",
+  "homeStatus": 200,
+  "careersUrl": "https://americasvoice.org/tag/economies-jobs-workers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.104Z",
+  "notes": []
+ },
+ "nilc": {
+  "id": "nilc",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.127Z",
+  "notes": []
+ },
+ "cpd": {
+  "id": "cpd",
+  "homeStatus": 200,
+  "careersUrl": "https://populardemocracy.org/job-opportunities/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "jazzhr",
+    "token": "centerforpopulardemocracy"
+   },
+   {
+    "type": "adp",
+    "token": "19000101"
+   },
+   {
+    "type": "ukg",
+    "token": "MAC1006/JobBoard/8a59124b-b9fb-4624-a213-11d654fe9408"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:21.206Z",
+  "notes": []
+ },
+ "human-rights-first": {
+  "id": "human-rights-first",
+  "homeStatus": 200,
+  "careersUrl": "https://www.humanrightsfirst.org/careers",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.213Z",
+  "notes": []
+ },
+ "stand-up-america": {
+  "id": "stand-up-america",
+  "homeStatus": 200,
+  "careersUrl": "https://standupamerica.com/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.247Z",
+  "notes": []
+ },
+ "jstreet": {
+  "id": "jstreet",
+  "homeStatus": 200,
+  "careersUrl": "https://jstreet.org/about-us/jobs",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "bamboohr",
+    "token": "jstreet"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:21.381Z",
+  "notes": []
+ },
+ "votevets": {
+  "id": "votevets",
+  "homeStatus": 200,
+  "careersUrl": "https://votevets.org/careers",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.462Z",
+  "notes": []
+ },
+ "feminist-majority": {
+  "id": "feminist-majority",
+  "homeStatus": 200,
+  "careersUrl": "https://secure.everyaction.com/jfJ2RZeCr0eYO6fA8-fdeA2",
+  "internUrl": "https://feminist.org/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.575Z",
+  "notes": []
+ },
+ "now": {
+  "id": "now",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.620Z",
+  "notes": []
+ },
+ "national-partnership": {
+  "id": "national-partnership",
+  "homeStatus": 200,
+  "careersUrl": "https://nationalpartnership.org/octobers-jobs-data-show-why-voters-rejected-trump-economy-jobsday-nov-2026/",
+  "internUrl": "https://nationalpartnership.org/about-us/join-our-team/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:21.928Z",
+  "notes": []
+ },
+ "families-usa": {
+  "id": "families-usa",
+  "homeStatus": 200,
+  "careersUrl": "https://www.familiesusa.org/about/careers/",
+  "internUrl": "https://www.familiesusa.org/job-career/2027-spring-families-usa-internship/",
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:22.067Z",
+  "notes": []
+ },
+ "hub-project": {
+  "id": "hub-project",
+  "homeStatus": 200,
+  "careersUrl": "https://thehubproject.org/jobs/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:22.290Z",
+  "notes": []
+ },
+ "afl-cio": {
+  "id": "afl-cio",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:22.342Z",
+  "notes": []
+ },
+ "seiu": {
+  "id": "seiu",
+  "homeStatus": 200,
+  "careersUrl": "https://www.seiu.org/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "ukg",
+    "token": "SER1005SEIU/JobBoard/e131b2ae-a5ce-4fb1-a93c-84c36a485721"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:22.692Z",
+  "notes": []
+ },
+ "afscme": {
+  "id": "afscme",
+  "homeStatus": 200,
+  "careersUrl": "https://afscme.org/about/jobs-we-do/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:22.719Z",
+  "notes": []
+ },
+ "aft": {
+  "id": "aft",
+  "homeStatus": 200,
+  "careersUrl": "https://www.aft.org/education/CareerAndTechnicalEducation",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:22.776Z",
+  "notes": []
+ },
+ "nea": {
+  "id": "nea",
+  "homeStatus": 200,
+  "careersUrl": "https://www.nea.org/careers",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "workday",
+    "token": "nea.wd1.myworkdayjobs.com/ExternalCareers"
+   },
+   {
+    "type": "adp",
+    "token": "19000101"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:22.890Z",
+  "notes": []
+ },
+ "cwa": {
+  "id": "cwa",
+  "homeStatus": 200,
+  "careersUrl": "https://cwa-union.org/about/careers-cwa",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "paycom",
+    "token": "3DD4D8AF8C58AF2A4AA4B0629E6428E9"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:23.066Z",
+  "notes": []
+ },
+ "unite-here": {
+  "id": "unite-here",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:23.317Z",
+  "notes": []
+ },
+ "gqr": {
+  "id": "gqr",
+  "homeStatus": 200,
+  "careersUrl": "https://www.gqrr.com/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "bamboohr",
+    "token": "gqrr"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:23.373Z",
+  "notes": []
+ },
+ "gsg": {
+  "id": "gsg",
+  "homeStatus": 200,
+  "careersUrl": "https://globalstrategygroup.com/careers/",
+  "internUrl": "https://jobs.lever.co/globalstrategygroup/ae9fd67b-1b48-4020-b7f8-0cf9c5662935",
+  "ats": [
+   {
+    "type": "lever",
+    "token": "globalstrategygroup"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:23.666Z",
+  "notes": []
+ },
+ "hart": {
+  "id": "hart",
+  "homeStatus": 200,
+  "careersUrl": "https://hartresearch.com/about-us/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:23.686Z",
+  "notes": []
+ },
+ "lake": {
+  "id": "lake",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:24.077Z",
+  "notes": []
+ },
+ "impact": {
+  "id": "impact",
+  "homeStatus": "UND_ERR_SOCKET",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:24.251Z",
+  "notes": []
+ },
+ "blue-rose": {
+  "id": "blue-rose",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:24.391Z",
+  "notes": []
+ },
+ "catalist": {
+  "id": "catalist",
+  "homeStatus": 200,
+  "careersUrl": "https://catalist.us/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "lever",
+    "token": "catalist"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:24.706Z",
+  "notes": []
+ },
+ "targetsmart": {
+  "id": "targetsmart",
+  "homeStatus": 200,
+  "careersUrl": "https://targetsmart.com/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:24.928Z",
+  "notes": []
+ },
+ "civis": {
+  "id": "civis",
+  "homeStatus": 200,
+  "careersUrl": "https://www.civisanalytics.com/careers",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "civisanalytics"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:24.957Z",
+  "notes": []
+ },
+ "bluelabs": {
+  "id": "bluelabs",
+  "homeStatus": 200,
+  "careersUrl": "https://bluelabs.com/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "bluelabsanalyticsinc"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:25.189Z",
+  "notes": []
+ },
+ "grassroots-analytics": {
+  "id": "grassroots-analytics",
+  "homeStatus": 200,
+  "careersUrl": "https://www.grassrootsanalytics.com/careers",
+  "internUrl": "https://job-boards.greenhouse.io/grassrootsanalytics/jobs/4723798006?gh_src=n1rqk8h06us",
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "grassrootsanalytics"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:25.649Z",
+  "notes": []
+ },
+ "gmmb": {
+  "id": "gmmb",
+  "homeStatus": 200,
+  "careersUrl": "https://www.gmmb.com/join-our-team/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "workday",
+    "token": "interpublic.wd5.myworkdayjobs.com/OMC"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:25.813Z",
+  "notes": []
+ },
+ "skdk": {
+  "id": "skdk",
+  "homeStatus": 200,
+  "careersUrl": "https://skdknick.com/careers/",
+  "internUrl": "https://careers-skdk.icims.com/jobs/8309/fall-2026-spring-2027---public-affairs-internship%2c-new-york/job?mode=view",
+  "ats": [
+   {
+    "type": "icims",
+    "token": "careers-skdk"
+   },
+   {
+    "type": "icims",
+    "token": "cdn02"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:25.893Z",
+  "notes": []
+ },
+ "precision": {
+  "id": "precision",
+  "homeStatus": 200,
+  "careersUrl": "https://www.precisionstrategies.com/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "breezy",
+    "token": "precision-strategies"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:26.039Z",
+  "notes": []
+ },
+ "bpi": {
+  "id": "bpi",
+  "homeStatus": 200,
+  "careersUrl": "https://bpigroup.com/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.207Z",
+  "notes": []
+ },
+ "blue-state": {
+  "id": "blue-state",
+  "homeStatus": 200,
+  "careersUrl": "https://www.bluestate.co/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.236Z",
+  "notes": []
+ },
+ "authentic": {
+  "id": "authentic",
+  "homeStatus": 200,
+  "careersUrl": "https://authentic.org/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "breezy",
+    "token": "authentic"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:26.241Z",
+  "notes": []
+ },
+ "rising-tide": {
+  "id": "rising-tide",
+  "homeStatus": "ENOTFOUND",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.676Z",
+  "notes": []
+ },
+ "mothership": {
+  "id": "mothership",
+  "homeStatus": 200,
+  "careersUrl": "https://mothershipstrategies.com/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "jazzhr",
+    "token": "mothershipstrategiesllc"
+   }
+  ],
+  "checkedAt": "2026-11-11T22:15:26.786Z",
+  "notes": []
+ },
+ "dspolitical": {
+  "id": "dspolitical",
+  "homeStatus": "ENOTFOUND",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.856Z",
+  "notes": []
+ },
+ "trilogy": {
+  "id": "trilogy",
+  "homeStatus": 200,
+  "careersUrl": "https://trilogyinteractive.com/careers",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.937Z",
+  "notes": []
+ },
+ "middle-seat": {
+  "id": "middle-seat",
+  "homeStatus": 200,
+  "careersUrl": "https://middleseat.co/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:26.983Z",
+  "notes": []
+ },
+ "bonterra": {
+  "id": "bonterra",
+  "homeStatus": "UND_ERR_HEADERS_OVERFLOW",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:27.538Z",
+  "notes": []
+ },
+ "hgl": {
+  "id": "hgl",
+  "homeStatus": 200,
+  "careersUrl": "https://jobs.highergroundlabs.com/companies",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:27.559Z",
+  "notes": []
+ },
+ "elias": {
+  "id": "elias",
+  "homeStatus": "ENOTFOUND",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.190Z",
+  "notes": []
+ },
+ "dewey-square": {
+  "id": "dewey-square",
+  "homeStatus": 200,
+  "careersUrl": "https://www.deweysquare.com/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.325Z",
+  "notes": []
+ },
+ "arena-careers": {
+  "id": "arena-careers",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "gain-power": {
+  "id": "gain-power",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "daybook": {
+  "id": "daybook",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "tom-manatos": {
+  "id": "tom-manatos",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "brad-traverse": {
+  "id": "brad-traverse",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "feminist-jobs": {
+  "id": "feminist-jobs",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "idealist": {
+  "id": "idealist",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "inclusv": {
+  "id": "inclusv",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "house-resume-bank": {
+  "id": "house-resume-bank",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "senate-resume-bank": {
+  "id": "senate-resume-bank",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ },
+ "house-bulletin": {
+  "id": "house-bulletin",
+  "homeStatus": null,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-11T22:15:28.328Z",
+  "notes": [
+   "link only"
+  ]
+ }
+}

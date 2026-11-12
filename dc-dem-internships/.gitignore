@@ -1,0 +1,5 @@
+node_modules/
+scraper/.cache/
+dist/
+data/previous.json
+.DS_Store

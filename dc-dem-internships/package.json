@@ -1,0 +1,17 @@
+{
+  "name": "dc-dem-internships",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scraper and tracker for Democratic-side internships in Washington, DC",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "scrape": "node scraper/run.js",
+    "scrape:fast": "node scraper/run.js --skip=offices",
+    "discover": "node scraper/discover.js",
+    "build": "node build.js",
+    "refresh": "node scraper/run.js && node build.js",
+    "serve": "node server.js",
+    "test": "node scraper/test.js"
+  }
+}

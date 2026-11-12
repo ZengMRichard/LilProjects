@@ -1,0 +1,11 @@
+Facet includes third-party material:
+
+MediaPipe canonical face model
+  packages/metrics/third_party/mediapipe/canonical_face_model.obj, and the files derived from it:
+  packages/metrics/facet_metrics/data/canonical_face.json and apps/web/src/lib/face/canonical.json
+  Copyright The MediaPipe Authors. Licensed under the Apache License, Version 2.0.
+  https://github.com/google-ai-edge/mediapipe
+
+At run time the web app loads the MediaPipe Tasks Vision runtime (npm package
+@mediapipe/tasks-vision) and the face landmarker model (face_landmarker.task), both Apache-2.0.
+They are fetched at install time by apps/web/scripts/sync-mediapipe.mjs and are not committed.

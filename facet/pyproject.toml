@@ -1,0 +1,63 @@
+[project]
+name = "facet"
+version = "0.1.0"
+description = "Facet: measured, explained facial-proportion reports (API, worker and metrics library)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "pydantic>=2.8",
+    "uvicorn>=0.30",
+    "sqlalchemy>=2.0.30",
+    "cryptography>=43",
+    "numpy>=1.26",
+    "pillow>=10.4",
+]
+
+[project.optional-dependencies]
+# The optional LLM rewrite of the report summary (spec section 4, step 7).
+llm = ["anthropic>=1.0"]
+
+[project.scripts]
+facet = "facet_api.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "httpx2>=1.0",
+    "ruff>=0.6",
+    "pyright>=1.1.380",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "packages/metrics/facet_metrics",
+    "packages/norms/facet_norms",
+    "packages/report-templates/facet_templates",
+    "services/api/facet_api",
+    "services/worker/facet_worker",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["packages/metrics", "packages/norms", "packages/report-templates", "services/api", "services/worker"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]  # the formatter owns line length; long strings are copy
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Body", "fastapi.Cookie"]
+
+[tool.pyright]
+include = ["packages", "services", "tests", "scripts"]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"

@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+.next/
+apps/web/test-results/
+apps/web/playwright-report/
+*.tsbuildinfo
+next-env.d.ts
+
+# Fetched at install time (scripts/sync-mediapipe.mjs)
+apps/web/public/mediapipe/
+apps/web/public/models/
+
+# Local state and secrets: database, encrypted image store, keys
+.data/
+.env
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm

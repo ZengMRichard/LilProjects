@@ -1,0 +1,534 @@
+{
+ "guide": "RATING_GUIDE.md",
+ "note": "Written by Claude from data/digests.json. An estimate from the posting text, not an intern review.",
+ "ratings": {
+  "paylocity:crr:4527467": {
+   "balance": 5,
+   "social": 2,
+   "network": 2,
+   "work": 5,
+   "why": "Part-time and remote for course credit; litigation research and drafting with the legal team.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-313-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Paid Hill office program open to undergraduates, recent graduates and graduate students; hours are not stated.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-330-26": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "About 32 flexible hours a week in person; mostly graphics, video and press writing, with some front-office help.",
+   "at": "2026-11-13"
+  },
+  "lever:emilys-list:509caa0f-2077-4da2-9fa3-28f01f36660a": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 4,
+   "why": "Full- or part-time, hybrid; interns join staff events and Lunch and Learn sessions.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-318-26": {
+   "balance": 3,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Full-time in the DC office: constituent mail and office administration alongside communications and legislative research.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-326-26": {
+   "balance": 3,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Full-time: phones and the front office alongside research for legislative staff and drafting for the press team.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-308-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Hearings, briefings, memos and research for legislative staff, plus phones; paid by monthly stipend.",
+   "at": "2026-11-13"
+  },
+  "senate:164": {
+   "balance": null,
+   "social": null,
+   "network": 4,
+   "work": null,
+   "why": "A Senate fellowship for wounded veterans and military families; the posting gives no schedule or duties.",
+   "at": "2026-11-13"
+  },
+  "senate:932": {
+   "balance": null,
+   "social": null,
+   "network": 3,
+   "work": null,
+   "why": "A Senate state-office fellowship in Albuquerque for veterans and military families; no schedule or duties given.",
+   "at": "2026-11-13"
+  },
+  "senate:1239": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": 5,
+   "why": "Law clerks support Senate subcommittee investigations; the posting cites 20 hours a week.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:4806dd61-2e46-4814-a2cd-b00b9e50bb18": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "About 20 hours a week, hybrid, with a stipend; legal research for the party's counsel team.",
+   "at": "2026-11-13"
+  },
+  "senate:1255": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Press-team work: media monitoring, daily clips, and drafting releases and advisories; hours are not stated.",
+   "at": "2026-11-13"
+  },
+  "senate:1163": {
+   "balance": null,
+   "social": 2,
+   "network": 4,
+   "work": 5,
+   "why": "A one-year post-graduate fellowship on the Judiciary portfolio: vetting nominations and policy work.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-324-26": {
+   "balance": 3,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "In person Monday to Friday; phones, tours and mail alongside research, memos and communications work.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-293-26": {
+   "balance": 5,
+   "social": null,
+   "network": 3,
+   "work": 3,
+   "why": "Las Vegas district office; about 15 flexible hours a week of phones, briefings, district events and research.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-274-26": {
+   "balance": 3,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Full-time in the DC office: constituent calls and Capitol tours with policy briefings and research.",
+   "at": "2026-11-13"
+  },
+  "senate:1249": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 5,
+   "why": "Unpaid, in person; research and memos for Judiciary counsels, hearing preparation and stakeholder meetings.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-292-26": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Full- or part-time; the front office, phones and Capitol tours are listed first among the duties.",
+   "at": "2026-11-13"
+  },
+  "senate:1303": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Policy and communications fellows at a congressional commission: research, writing, social media and photography.",
+   "at": "2026-11-13"
+  },
+  "senate:1259": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Runs January 4 to May 7 in the DC office: constituent services with legislative research; hours are not stated.",
+   "at": "2026-11-13"
+  },
+  "senate:1263": {
+   "balance": 5,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Phoenix and Tucson offices: at least 20 hours a week in person, flexible scheduling, with a stipend.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:82425705-86cd-4211-863c-cef022329b0f": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "About 20 hours a week, hybrid, with a stipend; voter-protection legal research and writing.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-303-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "Phones and constituent mail with briefings, hearings and legislative research; paid.",
+   "at": "2026-11-13"
+  },
+  "senate:1290": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": 5,
+   "why": "Up to three research or communications interns, in person, January to May, scheduled around classes.",
+   "at": "2026-11-13"
+  },
+  "senate:1190": {
+   "balance": null,
+   "social": 2,
+   "network": 4,
+   "work": 5,
+   "why": "A one-year fellowship on the Banking and Housing portfolio: hearing preparation, legislation and stakeholder meetings.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-320-26": {
+   "balance": null,
+   "social": null,
+   "network": 3,
+   "work": 3,
+   "why": "Rochester district office, in person: constituent calls, letters and proclamations, and day-to-day office work.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:a38d54a1-ac06-4f44-a4a6-9f628e5e0175": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 4,
+   "why": "About 20 hours a week, hybrid; hands-on political accounting, with professional development for the intern cohort.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:3e5f80ca-39fa-40b7-9fad-273ae4bc45fd": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": null,
+   "why": "About 20 hours a week, hybrid, with a stipend; placements span departments, so the work depends on the team.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:763743a1-c28a-4f13-b17d-999b1e3b952d": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 4,
+   "why": "About 20 hours a week, hybrid; content work on the party's social media team as part of the intern cohort.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:9eb716a4-b84c-49c4-aefd-a922ce79a237": {
+   "balance": 5,
+   "social": 4,
+   "network": 5,
+   "work": 4,
+   "why": "About 20 hours a week, hybrid; work on the party's technology team, with mentorship named in the posting.",
+   "at": "2026-11-13"
+  },
+  "academicworks:cbcf:2987": {
+   "balance": 3,
+   "social": 5,
+   "network": 5,
+   "work": 4,
+   "why": "Nine weeks full-time in a Congressional Black Caucus member's office, with shared housing, a stipend and a cohort.",
+   "at": "2026-11-13"
+  },
+  "academicworks:cbcf:2989": {
+   "balance": 3,
+   "social": 5,
+   "network": 5,
+   "work": null,
+   "why": "A full-time summer placement with corporate executives, with CBCF housing, a stipend and a cohort.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:nwlc:5278061007": {
+   "balance": 5,
+   "social": null,
+   "network": 3,
+   "work": 5,
+   "why": "For JD students earning credit; hours follow school requirements, and the work can be remote, hybrid or in person.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:nwlc:5278072007": {
+   "balance": 4,
+   "social": 3,
+   "network": 3,
+   "work": 5,
+   "why": "Full-time at 37.5 paid hours a week, June 1 to August 9, hybrid or in person; legal and policy research.",
+   "at": "2026-11-13"
+  },
+  "senate:1233": {
+   "balance": 3,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Paid press internship: press-conference logistics, press calls, media monitoring, rapid response and daily clips.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:nwlc:5287179007": {
+   "balance": 5,
+   "social": null,
+   "network": 3,
+   "work": 5,
+   "why": "For JD students earning credit; litigation and policy work on reproductive rights, with hybrid work offered.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:nwlc:5287185007": {
+   "balance": 4,
+   "social": 3,
+   "network": 3,
+   "work": 5,
+   "why": "Full-time at 37.5 paid hours a week, hybrid; litigation and state and federal policy work.",
+   "at": "2026-11-13"
+  },
+  "senate:1180": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "A 14-week program: constituent correspondence and Capitol tours, plus projects from the legislative team.",
+   "at": "2026-11-13"
+  },
+  "senate:1181": {
+   "balance": null,
+   "social": null,
+   "network": 3,
+   "work": 2,
+   "why": "State office: the posting lists constituent service work and a variety of administrative duties.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:152213e1-54d9-4b2c-9511-96eb02f38241": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "About 20 hours a week, hybrid, with a stipend; voter-protection legal research and writing over the summer.",
+   "at": "2026-11-13"
+  },
+  "rippling:dnc:05aee341-a46e-4a53-8bb0-ee4a45187219": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "Runs May 31 to August 6, about 20 hours a week, hybrid; legal research for the party's counsel team.",
+   "at": "2026-11-13"
+  },
+  "senate:1264": {
+   "balance": null,
+   "social": null,
+   "network": 4,
+   "work": 5,
+   "why": "A one-year post-graduate fellowship on Judiciary work; fellows bring funding from their law school or another source.",
+   "at": "2026-11-13"
+  },
+  "bamboohr:jstreet:253": {
+   "balance": 3,
+   "social": 4,
+   "network": 4,
+   "work": null,
+   "why": "Eight weeks full-time in DC, June to August, with a weekly living stipend and a cohort of fellows.",
+   "at": "2026-11-13"
+  },
+  "paylocity:crr:4653107": {
+   "balance": 5,
+   "social": null,
+   "network": 3,
+   "work": null,
+   "why": "Part-time, 14 to 21 hours a week, in the general counsel's office in New York.",
+   "at": "2026-11-13"
+  },
+  "recruitee:third-way:2814045": {
+   "balance": 4,
+   "social": null,
+   "network": 4,
+   "work": 5,
+   "why": "A salaried fellowship doing digital communications for the New Democrat Coalition; hybrid schedule.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-315-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Builds the office's digital and social media presence; applications are taken on a rolling basis.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-314-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 3,
+   "why": "DC and Sacramento offices; duties vary and may include answering phones and data entry.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-309-26": {
+   "balance": null,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Press and legislative tracks in the DC office for undergraduates through recent graduates; paid, course credit possible.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-297-26": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": 4,
+   "why": "Part- or full-time, in person; digital and communications work in the DC office.",
+   "at": "2026-11-13"
+  },
+  "house:MEM-296-26": {
+   "balance": 4,
+   "social": 3,
+   "network": 4,
+   "work": null,
+   "why": "Full- or part-time in the DC or Pennsylvania offices; stipends offered, with accommodations for Pell-eligible applicants.",
+   "at": "2026-11-13"
+  },
+  "lever:gsg:ae9fd67b-1b48-4020-b7f8-0cf9c5662935": {
+   "balance": 4,
+   "social": 3,
+   "network": 3,
+   "work": 4,
+   "why": "Full-time at 40 hours a week, hybrid; client work in strategic and crisis communications.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:grassroots-analytics:4723798006": {
+   "balance": 3,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Full-time and in person at the firm's DC office; the duties are specific to the account team.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:grassroots-analytics:4723837006": {
+   "balance": 3,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Full-time and in person at the firm's DC office; professional development and networking are named.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:grassroots-analytics:4724135006": {
+   "balance": 3,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Full-time and in person at the firm's DC office; the duties are specific to the digital team.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:grassroots-analytics:4724145006": {
+   "balance": 3,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Full-time and in person at the firm's DC office; the duties are specific to the marketing team.",
+   "at": "2026-11-13"
+  },
+  "greenhouse:grassroots-analytics:4724139006": {
+   "balance": 3,
+   "social": 3,
+   "network": 3,
+   "work": null,
+   "why": "Full-time and in person at the firm's DC office; the duties are specific to the nonprofit accounts team.",
+   "at": "2026-11-13"
+  },
+  "bamboohr:jstreet:249": {
+   "balance": 5,
+   "social": 4,
+   "network": 4,
+   "work": null,
+   "why": "Five to ten flexible hours a week through 2027 for working young professionals, with a cohort and mentorship.",
+   "at": "2026-11-13"
+  },
+  "paylocity:crr:4507670": {
+   "balance": 4,
+   "social": null,
+   "network": 3,
+   "work": 4,
+   "why": "Full-time, hybrid, on the U.S. policy and advocacy team in Washington.",
+   "at": "2026-11-13"
+  },
+  "paylocity:crr:4484704": {
+   "balance": 4,
+   "social": null,
+   "network": 3,
+   "work": 4,
+   "why": "Full-time, hybrid, on the U.S. policy and advocacy team in New York.",
+   "at": "2026-11-13"
+  },
+  "lever:wfp:a0b95c71-82d2-4be5-8c9a-c58a9084478b": {
+   "balance": 4,
+   "social": null,
+   "network": 3,
+   "work": null,
+   "why": "Part-time, about 20 flexible hours a week in Georgia, hybrid; the posting mentions evening or weekend work.",
+   "at": "2026-11-13"
+  },
+  "lever:wfp:b0b26a49-b703-42ac-a739-5f1739bd9c45": {
+   "balance": 4,
+   "social": null,
+   "network": 3,
+   "work": null,
+   "why": "A remote or in-person fellowship, with professional development and networking named in the posting.",
+   "at": "2026-11-13"
+  },
+  "jazzhr:mothership:pcj1sDccy0": {
+   "balance": 4,
+   "social": 2,
+   "network": 2,
+   "work": 4,
+   "why": "Remote, about 30 hours a week, at a digital fundraising firm; the posting is titled for Spring/Summer 2026.",
+   "at": "2026-11-13"
+  },
+  "senate:1331": {
+   "balance": 3,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "A 40-hour week, 9 to 6, remote or hybrid with an intern class; research, hearing tracking, memo drafting and notes at high-level meetings.",
+   "at": "2026-11-13"
+  },
+  "bamboohr:jstreet:206": {
+   "balance": null,
+   "social": 2,
+   "network": 2,
+   "work": 4,
+   "why": "A school-year fellowship on your own campus, not an office placement: you lead organizing and programming there with regional staff.",
+   "at": "2026-11-13"
+  },
+  "senate:1339": {
+   "balance": 3,
+   "social": 4,
+   "network": 4,
+   "work": 5,
+   "why": "A 40-hour week, 9 to 6, remote or hybrid with an intern class; research, hearing tracking, memo drafting and notes at high-level meetings.",
+   "at": "2026-11-18"
+  },
+  "lever:wfp:890062df-914a-4a22-bb78-11ad1dbc5198": {
+   "balance": null,
+   "social": null,
+   "network": null,
+   "work": null,
+   "why": "The text read here describes the party and its work in the South, not the fellow's hours, cohort or duties.",
+   "at": "2026-11-18"
+  }
+ }
+}

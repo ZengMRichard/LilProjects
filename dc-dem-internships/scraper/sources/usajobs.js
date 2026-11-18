@@ -10,6 +10,7 @@
  */
 const { fetchJson, pool } = require('../lib/http');
 const T = require('../lib/text');
+const S = require('../lib/signals');
 
 const API = 'https://data.usajobs.gov/api/historicjoa';
 // Student-trainee series most relevant to policy, law, communications, data and admin work.
@@ -59,6 +60,7 @@ async function usajobs({ today }) {
       deadline: close, deadlineBasis: close ? 'board' : null, deadlineNote: null, rolling: false,
       paid: unpaid ? (/unpaid|volunteer/i.test(x.positionTitle || '') ? 'unpaid' : 'unknown') : 'paid', payNote: unpaid ? null : salary,
       status: x.positionOpeningStatus || null,
+      needs: [], level: S.levels(x.positionTitle, ''), facts: { time: /part/i.test(x.workSchedule || '') ? 'part-time' : /full/i.test(x.workSchedule || '') ? 'full-time' : undefined },
       summary: [x.appointmentType, x.workSchedule, x.payScale && x.minimumGrade ? `${x.payScale}-${x.minimumGrade}${x.maximumGrade && x.maximumGrade !== x.minimumGrade ? '/' + x.maximumGrade : ''}` : null, x.announcementNumber].filter(Boolean).join(' · '),
     });
   }

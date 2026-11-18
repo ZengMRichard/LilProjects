@@ -5,6 +5,7 @@
  */
 const assert = require('assert');
 const T = require('./lib/text');
+const S = require('./lib/signals');
 const { splitListings, fileDate } = require('./sources/house');
 const { buildMatcher } = require('./lib/roster');
 
@@ -48,6 +49,20 @@ t('term from a title', () => assert.strictEqual(T.detectTerm('Spring 2027 Press 
 t('Winter/Spring Hill terms count as spring', () => assert.strictEqual(T.detectTerm('Intern', 'for the Winter/Spring 2027 term (January - April)', REF).label, 'Spring 2027'));
 t('pay: stipend', () => assert.strictEqual(T.detectPay('offers a $1,500 monthly stipend').paid, 'paid'));
 t('pay: unpaid', () => assert.strictEqual(T.detectPay('This is an unpaid internship.').paid, 'unpaid'));
+t('pay: a figure beside pay words', () => assert.strictEqual(T.detectPay('Interns receive a $1,500 monthly stipend.').note, '$1,500 monthly stipend'));
+t('pay: money raised is not pay', () => assert.strictEqual(T.detectPay('We have raised over $1 billion for campaigns. This is a paid internship.').note, 'Paid / stipend'));
+t('pay: a transit benefit is not pay', () => assert.strictEqual(T.detectPay('Interns get a transit benefit of $175 per month. The role pays $18.40 per hour.').note, '$18.40 per hour'));
+t('needs: materials named in the posting', () => assert.deepStrictEqual(S.requirements('Send a resume, cover letter, two writing samples and three references.'), ['resume', 'cover', 'writing', 'refs']));
+t('needs: press clips are a duty, not a requirement', () => assert.deepStrictEqual(S.requirements('Interns compile daily press clips. To apply, email a résumé.'), ['resume']));
+t('level: undergraduate, graduate and law, recent graduates', () => {
+  assert.deepStrictEqual(S.levels('Spring Intern', 'Open to current undergraduate students and recent graduates.'), ['undergrad', 'recent']);
+  assert.deepStrictEqual(S.levels('Spring 2027 Law Clerk', 'For students who have finished their 1L year.'), ['grad']);
+  assert.deepStrictEqual(S.levels('Intern', 'We advocate for seniors and working families.'), []);
+});
+t('facts: hours, schedule and mode', () => {
+  const f = S.facts('Intern', 'A full-time, paid position of 37.5 hours per week. This work may be done hybrid or in-person.');
+  assert.strictEqual(f.hours, '37.5'); assert.strictEqual(f.time, 'full-time'); assert.strictEqual(f.mode, 'hybrid');
+});
 t('role: clerk, fellow, intern', () => { assert.strictEqual(T.classifyRole('Spring 2027 Law Clerk'), 'clerkship'); assert.strictEqual(T.classifyRole('Legal Fellow'), 'fellowship'); assert.strictEqual(T.classifyRole('Press Intern'), 'internship'); });
 t('"Internal Communications Director" is not an internship', () => assert.strictEqual(T.isEarlyCareer('Internal Communications Director'), false));
 t('place', () => { assert.strictEqual(T.placeOf('Washington, District of Columbia'), 'dc'); assert.strictEqual(T.placeOf('Phoenix, Arizona'), 'elsewhere'); assert.strictEqual(T.placeOf('Remote'), 'remote'); });

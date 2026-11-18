@@ -1634,5 +1634,351 @@
   "notes": [
    "link only"
   ]
+ },
+ "loc": {
+  "id": "loc",
+  "homeStatus": 200,
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.727Z",
+  "notes": []
+ },
+ "gao": {
+  "id": "gao",
+  "homeStatus": 200,
+  "careersUrl": "https://www.gao.gov/about/careers",
+  "internUrl": "https://www.gao.gov/about/careers/students-and-career-paths",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.738Z",
+  "notes": []
+ },
+ "cbo": {
+  "id": "cbo",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.740Z",
+  "notes": []
+ },
+ "smithsonian": {
+  "id": "smithsonian",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.741Z",
+  "notes": []
+ },
+ "scotus": {
+  "id": "scotus",
+  "homeStatus": 200,
+  "careersUrl": "https://www.supremecourt.gov/jobs/jobs.aspx",
+  "internUrl": "https://www.supremecourt.gov/jobs/internship/InternshipProgram.aspx",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.742Z",
+  "notes": []
+ },
+ "wilson-center": {
+  "id": "wilson-center",
+  "homeStatus": 200,
+  "careersUrl": "https://www.wilsoncenter.org/careers-internships",
+  "internUrl": "https://www.wilsoncenter.org/internships",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.742Z",
+  "notes": []
+ },
+ "csis": {
+  "id": "csis",
+  "homeStatus": 200,
+  "careersUrl": "https://www.csis.org/about/careers-culture",
+  "internUrl": "https://www.csis.org/about/careers-culture/internships",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:20.743Z",
+  "notes": []
+ },
+ "carnegie": {
+  "id": "carnegie",
+  "homeStatus": 200,
+  "careersUrl": "https://carnegieendowment.org/employment-opportunities-at-the-carnegie-endowment-for-international-peace",
+  "internUrl": "https://carnegieendowment.org/internships-at-the-carnegie-endowment-for-international-peace",
+  "ats": [
+   {
+    "type": "applicantpro",
+    "token": "carnegieendowment"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:20.743Z",
+  "notes": []
+ },
+ "cfr": {
+  "id": "cfr",
+  "homeStatus": 200,
+  "careersUrl": "https://www.cfr.org/career-opportunities",
+  "internUrl": "https://www.cfr.org/fellowships",
+  "ats": [
+   {
+    "type": "icims",
+    "token": "careers-cfr"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:21.208Z",
+  "notes": []
+ },
+ "atlantic-council": {
+  "id": "atlantic-council",
+  "homeStatus": 200,
+  "careersUrl": "https://www.atlanticcouncil.org/careers/",
+  "internUrl": "https://www.atlanticcouncil.org/careers/internships/",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:21.283Z",
+  "notes": []
+ },
+ "bpc": {
+  "id": "bpc",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:21.520Z",
+  "notes": []
+ },
+ "pew-research": {
+  "id": "pew-research",
+  "homeStatus": 200,
+  "careersUrl": "https://www.pewresearch.org/about/careers/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "workday",
+    "token": "pewtrusts.wd5.myworkdayjobs.com/CenterExternal"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:21.652Z",
+  "notes": []
+ },
+ "pps": {
+  "id": "pps",
+  "homeStatus": 200,
+  "careersUrl": "https://ourpublicservice.org/about/work-with-us",
+  "internUrl": "https://ourpublicservice.org/about/work-with-us/partnership-internship-program",
+  "ats": [
+   {
+    "type": "greenhouse",
+    "token": "partnershipforpublicservice"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:21.703Z",
+  "notes": []
+ },
+ "aspen": {
+  "id": "aspen",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:21.835Z",
+  "notes": []
+ },
+ "stimson": {
+  "id": "stimson",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:21.925Z",
+  "notes": []
+ },
+ "cnas": {
+  "id": "cnas",
+  "homeStatus": 200,
+  "careersUrl": "https://www.cnas.org/careers",
+  "internUrl": "https://www.cnas.org/next-generation-programs/internships",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:21.932Z",
+  "notes": []
+ },
+ "rand": {
+  "id": "rand",
+  "homeStatus": 200,
+  "careersUrl": "https://www.rand.org/education-employment-infrastructure.html",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.075Z",
+  "notes": []
+ },
+ "mpi": {
+  "id": "mpi",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.122Z",
+  "notes": []
+ },
+ "piie": {
+  "id": "piie",
+  "homeStatus": 200,
+  "careersUrl": "https://www.piie.com/about/employment",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.220Z",
+  "notes": []
+ },
+ "kff": {
+  "id": "kff",
+  "homeStatus": 200,
+  "careersUrl": "https://www.kff.org/about-us/employment-opportunities/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "bamboohr",
+    "token": "kff"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:22.273Z",
+  "notes": []
+ },
+ "crfb": {
+  "id": "crfb",
+  "homeStatus": 200,
+  "careersUrl": "https://www.crfb.org/about-us/job-opportunities",
+  "internUrl": "https://www.crfb.org/jobs/internship",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.281Z",
+  "notes": []
+ },
+ "clc": {
+  "id": "clc",
+  "homeStatus": 200,
+  "careersUrl": "https://campaignlegal.org/careers",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.462Z",
+  "notes": []
+ },
+ "issue-one": {
+  "id": "issue-one",
+  "homeStatus": 200,
+  "careersUrl": "https://issueone.org/jobs/",
+  "internUrl": null,
+  "ats": [
+   {
+    "type": "rippling",
+    "token": "issue-one-jobs"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:22.571Z",
+  "notes": []
+ },
+ "opensecrets": {
+  "id": "opensecrets",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.703Z",
+  "notes": []
+ },
+ "pogo": {
+  "id": "pogo",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.763Z",
+  "notes": []
+ },
+ "lwv": {
+  "id": "lwv",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.787Z",
+  "notes": []
+ },
+ "nga": {
+  "id": "nga",
+  "homeStatus": 200,
+  "careersUrl": "https://www.nga.org/about/careers/",
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.896Z",
+  "notes": []
+ },
+ "ncsl": {
+  "id": "ncsl",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:22.903Z",
+  "notes": []
+ },
+ "nlc": {
+  "id": "nlc",
+  "homeStatus": 200,
+  "careersUrl": "https://www.nlc.org/about/jobs-at-nlc/",
+  "internUrl": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=342e72a4-88d6-4322-88e1-b32c8efdd9fe&ccId=9201035581954_2&type=JS&lang=en_US",
+  "ats": [
+   {
+    "type": "adp",
+    "token": "9201035581954"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:23.095Z",
+  "notes": []
+ },
+ "freedom-house": {
+  "id": "freedom-house",
+  "homeStatus": 200,
+  "careersUrl": "https://freedomhouse.org/careers",
+  "internUrl": "https://freedomhouse.org/careers/freedom-world-junior-fellowship",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:23.238Z",
+  "notes": []
+ },
+ "ned": {
+  "id": "ned",
+  "homeStatus": 200,
+  "careersUrl": "https://www.ned.org/about/jobs/",
+  "internUrl": "https://www.ned.org/fellowships/reagan-fascell-democracy-fellows-program/",
+  "ats": [
+   {
+    "type": "adp",
+    "token": "19000101"
+   }
+  ],
+  "checkedAt": "2026-11-13T04:30:23.289Z",
+  "notes": []
+ },
+ "cmf": {
+  "id": "cmf",
+  "homeStatus": 200,
+  "careersUrl": "https://www.congressfoundation.org/jobs",
+  "internUrl": "https://www.congressfoundation.org/jobs",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:23.350Z",
+  "notes": []
+ },
+ "twc": {
+  "id": "twc",
+  "homeStatus": 200,
+  "careersUrl": "https://twc.edu/about/careers-washington-center",
+  "internUrl": "https://twc.edu/programs/academic-internship-program",
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:23.402Z",
+  "notes": []
+ },
+ "hunger-center": {
+  "id": "hunger-center",
+  "homeStatus": "HTTP 403",
+  "careersUrl": null,
+  "internUrl": null,
+  "ats": [],
+  "checkedAt": "2026-11-13T04:30:23.470Z",
+  "notes": []
  }
 }

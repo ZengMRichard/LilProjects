@@ -6,6 +6,7 @@
  */
 const { politeFetch, pool } = require('../lib/http');
 const T = require('../lib/text');
+const S = require('../lib/signals');
 
 const SITE = 'https://careers.employment.senate.gov';
 const SITEMAP = `${SITE}/sitemap_active_jobs.xml`;
@@ -87,6 +88,7 @@ async function senate({ today, match, senateMajority }) {
       party: pp.party, partyVia: pp.member ? 'member' : (pp.viaMajority ? 'majority' : (pp.party ? 'text' : null)),
       member: pp.member ? { id: pp.member.id, name: pp.member.name, state: pp.member.state } : null,
       summary: T.clip(body, 280),
+      needs: S.requirements(body), level: S.levels(title, body), facts: S.facts(title, body), excerpt: T.clip(body, 1100),
     });
   }
   return { ok: true, total, postings };

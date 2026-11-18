@@ -254,9 +254,19 @@ function detectTerm(title, body, refIso) {
 function detectPay(text) {
   const t = String(text || '');
   const unpaid = /\b(unpaid|un-paid|not a paid|no stipend|without (?:pay|compensation)|volunteer (?:position|internship)|for (?:academic|course|school) credit only)\b/i.test(t);
-  const money = t.match(/\$\s?\d[\d,]*(?:\.\d{1,2})?(?:\s?(?:-|–|to)\s?\$?\s?\d[\d,]*(?:\.\d{1,2})?)?(?:\s*(?:\/|per|an|a)\s*(?:hour|hr|month|week|year|session|semester|term))?(?:\s+(?:monthly\s+|weekly\s+)?stipend)?/i);
+  // A dollar figure only counts as pay when pay words sit beside it: "$1 billion raised" and a
+  // "$175 transit benefit" are not what the internship pays.
+  const re = /\$\s?\d[\d,]*(?:\.\d{1,2})?(?:\s?(?:-|–|to)\s?\$?\s?\d[\d,]*(?:\.\d{1,2})?)?(?:\s*(?:\/|per|an|a)\s*(?:hour|hr|month|week|year|session|semester|term))?(?:\s+(?:monthly\s+|weekly\s+|living\s+)?stipend)?/gi;
+  let money = null, m;
+  while ((m = re.exec(t))) {
+    const end = m.index + m[0].length;
+    if (/^\s*(?:million|billion|trillion|[kmb]\b)/i.test(t.slice(end, end + 12))) continue;
+    const before = t.slice(Math.max(0, m.index - 70), m.index), around = before + m[0] + t.slice(end, end + 50);
+    if (/transit|commuter|metro|parking|wellness|reimburs|raised|donat|budget|grant/i.test(before.slice(-45))) continue;
+    if (/stipend|hour|salary|compensat|\bpaid\b|\bpay\b|wage|\brate\b|per (?:week|month|semester)/i.test(around)) { money = m[0]; break; }
+  }
   const paidWord = /\b(paid (?:internship|intern|position|fellowship|program)|is paid|are paid|will be paid|(?:full|part)-time,? paid|stipend|hourly (?:rate|wage)|compensat(?:ed|ion))\b/i.test(t);
-  if (money || (paidWord && !unpaid)) return { paid: 'paid', note: money ? money[0].replace(/\s+/g, ' ').trim() : 'Paid / stipend' };
+  if (money || (paidWord && !unpaid)) return { paid: 'paid', note: money ? money.replace(/\s+/g, ' ').trim() : 'Paid / stipend' };
   if (unpaid) return { paid: paidWord ? 'mixed' : 'unpaid', note: paidWord ? 'Unpaid; stipend or credit may be available' : 'Unpaid' };
   return { paid: 'unknown', note: null };
 }

@@ -11,6 +11,7 @@
 const { politeFetch } = require('../lib/http');
 const T = require('../lib/text');
 const L = require('../lib/links');
+const S = require('../lib/signals');
 
 const NOTICE_RE = /[^.!?\n]{0,160}(?:applications?|application (?:period|window|portal|process)|portal|program)[^.!?\n]{0,80}\b(?:(?:are|is|will be|has|have)\s+(?:now |currently |not |no longer |been )*(?:open(?:ed)?|closed|accept(?:ed|ing)|available|live|under review)|will (?:re)?open|opens?\s+(?:in|on|this|next)|closes?\s+(?:in|on)|check back|not (?:currently )?accepting)[^.!?\n]{0,200}[.!?]?/gi;
 
@@ -55,6 +56,7 @@ async function readPage(url, today) {
     windows: w.deadlines.slice(0, 8), opens: w.opens.slice(0, 4), rolling: w.rolling,
     notices: notices(text).filter((n) => !stale(n)), paid: pay.paid, payNote: pay.note,
     applyUrl: applyLink(html, r.url),
+    needs: S.requirements(text), level: S.levels('', text),
     mentionsIntern: L.INTERN_RE.test(text),
     length: text.length,
   };

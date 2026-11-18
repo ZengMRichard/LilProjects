@@ -52,7 +52,7 @@ async function crawlOffice(m, today) {
       if (!p.ok || !p.mentionsIntern || p.length < 250) continue;
       // a real program page talks about applying; a soft-404 or nav stub does not
       if (!/appl(y|ication)|resume|résumé|deadline|session|semester/i.test(p.text)) continue;
-      Object.assign(out, { internUrl: p.url, status: 'found', windows: p.windows, opens: p.opens, notices: p.notices, rolling: p.rolling, paid: p.paid, payNote: p.payNote, applyUrl: p.applyUrl, hash: p.hash });
+      Object.assign(out, { internUrl: p.url, status: 'found', windows: p.windows, opens: p.opens, notices: p.notices, rolling: p.rolling, paid: p.paid, payNote: p.payNote, applyUrl: p.applyUrl, hash: p.hash, needs: p.needs, level: p.level });
       delete out.error;
       return true;
     }

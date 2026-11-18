@@ -12,6 +12,7 @@ const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const T = require('../lib/text');
+const S = require('../lib/signals');
 
 const REPO = 'https://github.com/dwillis/house-jobs';
 const CACHE = path.join(__dirname, '..', '.cache', 'house-jobs');
@@ -121,6 +122,7 @@ function parseBulletin(text, bulletinDate, file, { match, houseMajority }) {
       party, partyVia,
       member: member ? { id: member.id, name: member.name, state: member.state, district: member.district } : null,
       summary: T.clip(flat, 280),
+      needs: S.requirements(flat), level: S.levels(l.title, flat), facts: S.facts(l.title, flat), excerpt: T.clip(flat, 1100),
     };
   });
 }

@@ -14,6 +14,12 @@ const path = require('path');
 const ROOT = __dirname;
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'internships.json'), 'utf8'));
 const template = fs.readFileSync(path.join(ROOT, 'site', 'template.html'), 'utf8');
+const gameJs = fs.readFileSync(path.join(ROOT, 'site', 'game.js'), 'utf8');
+// Claude's ratings, keyed by posting id (see RATING_GUIDE.md). A posting without one is shown unrated.
+let ratings = {};
+try { ratings = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'ratings.json'), 'utf8')).ratings || {}; } catch (e) { /* none yet */ }
+const rateOf = (id) => { const r = ratings[id]; return r ? { b: r.balance == null ? null : r.balance, s: r.social == null ? null : r.social, n: r.network == null ? null : r.network, w: r.work == null ? null : r.work, why: r.why || '' } : null; };
+const factsOf = (f) => (f ? { hours: f.hours || null, time: f.time || null, flex: f.flexible ? 1 : 0, mode: f.mode || null, perks: f.perks || [] } : null);
 
 const win = (w) => ({ iso: w.iso, y: w.hasYear ? 1 : 0, m: w.month, d: w.day, s: w.season || null, sy: w.seasonYear || null, t: w.term || null, g: w.termGuessed ? 1 : 0, a: w.approx ? 1 : 0, q: w.snippet || '' });
 
@@ -28,6 +34,7 @@ const postings = data.postings.filter((p) => p.party !== 'R').map((p) => ({
   party: p.party || null, via: p.partyVia || null,
   st: p.member ? p.member.state : null, dist: p.member ? p.member.district || null : null, mid: p.member ? p.member.id : null,
   sum: p.summary || '', seen: p.firstSeen ? p.firstSeen.slice(0, 10) : null, fresh: p.newThisWeek ? 1 : 0, status: p.status || null,
+  needs: p.needs || [], level: p.level || [], facts: factsOf(p.facts), rate: rateOf(p.id),
 }));
 const kept = new Set(postings.map((p) => p.id));
 
@@ -39,7 +46,7 @@ const orgs = data.orgs.map((o) => {
     board: o.board ? { label: o.board.label, url: o.board.url, ok: o.board.ok ? 1 : 0, total: o.board.total } : null,
     other: o.otherSystem, blocked: o.siteBlocked ? 1 : 0,
     cycles: o.cycles || [],
-    facts: s && s.ok && s.isInternPage ? { url: s.url, w: (s.windows || []).map(win), o: (s.opens || []).map(win), n: s.notices || [], rolling: s.rolling ? 1 : 0, paid: s.paid, pay: s.payNote, at: s.checkedAt } : null,
+    facts: s && s.ok && s.isInternPage ? { url: s.url, w: (s.windows || []).map(win), o: (s.opens || []).map(win), n: s.notices || [], rolling: s.rolling ? 1 : 0, paid: s.paid, pay: s.payNote, at: s.checkedAt, needs: s.needs || [], level: s.level || [] } : null,
     pageErr: s && !s.ok ? s.error : null, changed: s && s.changed ? 1 : 0,
     pids: (o.postingIds || []).filter((id) => kept.has(id)),
   };
@@ -49,7 +56,7 @@ const offices = data.offices.map((o) => ({
   id: o.id, name: o.name, last: o.last, ch: o.chamber === 'senate' ? 'S' : 'H', party: o.party, st: o.state, stn: o.stateName, dist: o.district,
   url: o.url, room: o.office, phone: o.phone, page: o.internUrl, found: o.status === 'found' ? 1 : 0,
   w: (o.windows || []).map(win), o: (o.opens || []).map(win), n: (o.notices || []).slice(0, 2), rolling: o.rolling ? 1 : 0,
-  paid: o.paid, pay: o.payNote, apply: o.applyUrl, changed: o.changed ? 1 : 0,
+  paid: o.paid, pay: o.payNote, apply: o.applyUrl, changed: o.changed ? 1 : 0, needs: o.needs || [], level: o.level || [],
   pids: (o.postingIds || []).filter((id) => kept.has(id)),
 }));
 
@@ -63,7 +70,14 @@ const out = {
 // JSON inside a <script> block: neutralize anything that could end the block early.
 const json = JSON.stringify(out).replace(/</g, '\\u003c').replace(new RegExp(String.fromCharCode(0x2028), 'g'), '\\u2028').replace(new RegExp(String.fromCharCode(0x2029), 'g'), '\\u2029');
 if (!template.includes('/*__DATA__*/')) throw new Error('template.html is missing the /*__DATA__*/ placeholder');
-const page = template.replace('/*__DATA__*/', () => json);
+// Images in site/assets are written into the page as data URIs, so the page stays one file.
+const MIME = { webp: 'image/webp', png: 'image/png', jpg: 'image/jpeg', svg: 'image/svg+xml' };
+const asset = (name) => `data:${MIME[name.split('.').pop()] || 'application/octet-stream'};base64,${fs.readFileSync(path.join(ROOT, 'site', 'assets', name)).toString('base64')}`;
+if (!template.includes('/*__GAME_JS__*/')) throw new Error('template.html is missing the /*__GAME_JS__*/ placeholder');
+const page = template
+  .replace(/__ASSET:([\w.-]+)__/g, (m, name) => asset(name))
+  .replace('/*__GAME_JS__*/', () => gameJs.replace(/<\/script/gi, '<\\/script'))
+  .replace('/*__DATA__*/', () => json);
 
 fs.mkdirSync(path.join(ROOT, 'dist'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'site', 'index.html'), page);
@@ -73,4 +87,5 @@ fs.writeFileSync(path.join(ROOT, 'dist', 'internships.json'), JSON.stringify(dat
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
 console.log(`Built site/index.html (${kb(page.length)}) and dist/index.html from the scrape of ${data.meta.generatedAt}`);
+console.log(`${Object.keys(ratings).length} ratings on file, ${postings.filter((p) => p.rate).length} applied.`);
 console.log(`${postings.length} postings shown (${data.postings.length - postings.length} from Republican offices left out), ${orgs.length} organizations, ${offices.length} offices.`);

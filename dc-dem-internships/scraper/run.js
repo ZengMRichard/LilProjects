@@ -23,6 +23,7 @@ const { readPage } = require('./sources/pages');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data', 'internships.json');
+const DIGESTS = path.join(ROOT, 'data', 'digests.json'); // posting text and facts, the basis for the ratings in data/ratings.json
 const DISCOVERED = path.join(__dirname, 'config', 'discovered.json');
 const STAGES = ['boards', 'senate', 'house', 'usajobs', 'offices', 'pages'];
 
@@ -77,7 +78,7 @@ function goodInternUrl(u) {
   } catch (e) { return null; }
 }
 
-const fromPrev = (o) => ({ id: o.id, internUrl: o.internUrl, status: o.status, windows: o.windows, opens: o.opens, notices: o.notices, rolling: o.rolling, paid: o.paid, payNote: o.payNote, applyUrl: o.applyUrl, hash: o.hash, checkedAt: o.checkedAt, error: o.error });
+const fromPrev = (o) => ({ id: o.id, internUrl: o.internUrl, status: o.status, windows: o.windows, opens: o.opens, notices: o.notices, rolling: o.rolling, paid: o.paid, payNote: o.payNote, applyUrl: o.applyUrl, hash: o.hash, checkedAt: o.checkedAt, error: o.error, needs: o.needs, level: o.level });
 
 async function main() {
   const args = parseArgs();
@@ -192,7 +193,7 @@ async function main() {
       if (p.ok) okCount++;
       const { text, mentionsIntern, length, ...rest } = p; // keep the facts, not the page text
       // dates on a general careers page belong to staff jobs: only a real internship page is read for dates
-      if (!o.page && rest.ok) Object.assign(rest, { windows: [], opens: [], notices: [], rolling: false, paid: 'unknown', payNote: null, applyUrl: null });
+      if (!o.page && rest.ok) Object.assign(rest, { windows: [], opens: [], notices: [], rolling: false, paid: 'unknown', payNote: null, applyUrl: null, needs: [], level: [] });
       pageInfo[o.id] = { ...rest, isInternPage: !!o.page, checkedAt: new Date().toISOString() };
     }
     addSource({ id: 'pages', label: 'Organization internship and careers pages', kind: 'html', url: null, ok: true, count: okCount, total: targets.length, error: null, note: targets.length === okCount ? 'Every page loaded' : `${targets.length - okCount} ${targets.length - okCount === 1 ? 'page' : 'pages'} refused automated requests or failed to load` });
@@ -233,7 +234,7 @@ async function main() {
       id: m.id, name: m.name, last: m.last, chamber: m.chamber, party: m.party, state: m.state, stateName: m.stateName, district: m.district, rank: m.rank,
       url: m.url, office: m.office, phone: m.phone, termEnd: m.termEnd,
       internUrl: r.internUrl || null, status: r.status, error: r.error || null,
-      windows: r.windows || [], opens: r.opens || [], notices: r.notices || [], rolling: !!r.rolling, paid: r.paid || 'unknown', payNote: r.payNote || null, applyUrl: r.applyUrl || null,
+      windows: r.windows || [], opens: r.opens || [], notices: r.notices || [], rolling: !!r.rolling, paid: r.paid || 'unknown', payNote: r.payNote || null, applyUrl: r.applyUrl || null, needs: r.needs || [], level: r.level || [],
       hash: r.hash || null, changed: !!(po && po.hash && r.hash && po.hash !== r.hash), checkedAt: r.checkedAt || null,
       postingIds: postings.filter((p) => p.member && p.member.id === m.id).map((p) => p.id),
     };
@@ -248,6 +249,18 @@ async function main() {
       ...outOffices.filter((o) => o.changed).map((o) => ({ kind: 'office', id: o.id, name: o.name, url: o.internUrl })),
     ];
   }
+
+  // Ratings are written from this digest (see RATING_GUIDE.md). Postings carried over from an
+  // earlier run have no fresh text, so their previous digest entry is kept.
+  const prevDigests = (readJson(DIGESTS) || {}).postings || {};
+  const digests = {};
+  for (const p of postings) {
+    if (p.excerpt) digests[p.id] = { org: p.orgFull || p.org, title: p.title, term: p.term, role: p.role, place: p.place, location: p.location, paid: p.paid, pay: p.payNote, deadline: p.deadline, needs: p.needs, level: p.level, facts: p.facts, text: p.excerpt };
+    else if (prevDigests[p.id]) digests[p.id] = prevDigests[p.id];
+    delete p.excerpt;
+  }
+  fs.mkdirSync(path.dirname(DIGESTS), { recursive: true });
+  fs.writeFileSync(DIGESTS, JSON.stringify({ generatedAt: startedAt, postings: digests }, null, 1));
 
   const hill = postings.filter((p) => p.source === 'senate' || p.source === 'house');
   const out = {

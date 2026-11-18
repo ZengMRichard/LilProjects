@@ -82,17 +82,19 @@ select { padding-right: 30px !important; background-repeat: no-repeat; backgroun
 .stampline b { color: var(--ink); }
 .pins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 6px; justify-items: center; padding: 6px 0; }
 .pin { --r: 0deg; width: clamp(128px, 15.5vw, 172px); aspect-ratio: 1; border-radius: 50%; display: grid; place-content: center; justify-items: center; gap: 2px; text-align: center; text-decoration: none;
-  transform: rotate(var(--r)); border: 5px solid var(--pin-ring); color: var(--pin-fg);
-  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .42), rgba(255, 255, 255, 0) 44%), var(--pin-bg);
-  box-shadow: 0 0 0 2px var(--ink), 6px 8px 0 var(--shadow); transition: transform .18s ease; }
+  /* the face is a photograph of a blank pin-back button (site/assets), so the ink colors on it do not change with the theme */
+  transform: rotate(var(--r)); color: var(--pin-fg); background: var(--pin-img) center / 100% 100% no-repeat;
+  filter: drop-shadow(3px 6px 5px var(--pin-shadow)); transition: transform .18s ease; }
 @media (hover: hover) { .pin:hover { transform: rotate(0deg) scale(1.04); } }
+.pin:active { transform: rotate(var(--r)) scale(.97); }
 .pin-stars { font-size: 11px; letter-spacing: .5em; margin-right: -.5em; opacity: .9; }
 .pin-n { font-family: var(--display); font-size: clamp(38px, 4.8vw, 54px); line-height: .95; }
-.pin-l { font-family: var(--gothic); text-transform: uppercase; letter-spacing: .06em; font-size: clamp(15px, 1.6vw, 18px); line-height: 1.02; max-width: 7.2em; }
-.pin-blue { --pin-bg: var(--blue); --pin-fg: var(--on-blue); --pin-ring: var(--paper-3); }
-.pin-red { --pin-bg: var(--red); --pin-fg: var(--on-red); --pin-ring: var(--paper-3); }
-.pin-cream { --pin-bg: var(--paper-3); --pin-fg: var(--ink); --pin-ring: var(--blue); }
-.pin-gold { --pin-bg: var(--gold); --pin-fg: var(--on-gold); --pin-ring: var(--paper-3); }
+.pin-l { font-family: var(--gothic); text-transform: uppercase; letter-spacing: .06em; font-size: clamp(15px, 1.6vw, 18px); line-height: 1.02; max-width: 6.6em; }
+.pins { --pin-shadow: rgba(16, 20, 36, .45); }
+.pin-blue { --pin-img: url("__ASSET:pin-blue.webp__"); --pin-fg: #F8F2E2; }
+.pin-red { --pin-img: url("__ASSET:pin-red.webp__"); --pin-fg: #F8F2E2; }
+.pin-cream { --pin-img: url("__ASSET:pin-cream.webp__"); --pin-fg: #1A2238; }
+.pin-gold { --pin-img: url("__ASSET:pin-gold.webp__"); --pin-fg: #1A2238; }
 .pin:nth-child(1) { --r: -7deg; } .pin:nth-child(2) { --r: 5deg; margin-top: 26px; } .pin:nth-child(3) { --r: 4deg; margin-top: -18px; } .pin:nth-child(4) { --r: -5deg; margin-top: 8px; }
 
 /* ───────────────────────────── section tabs */
@@ -193,6 +195,29 @@ details.filters > .ballot-row + .ballot-row { margin-top: 12px; }
 .t-meta span { overflow-wrap: anywhere; }
 .t-meta .pay { color: var(--ink); font-weight: 700; }
 .t-quote { margin-top: 4px; font-size: 13px; font-style: italic; color: var(--ink-2); border-left: 3px solid var(--hair); padding-left: 8px; overflow-wrap: anywhere; }
+.ticket.np .t-kick { color: var(--ink-2); }
+
+/* ───────────────────────────── info bubbles: who a posting is open to, what it asks for, what it offers */
+.bubs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 6px; }
+.bg { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 5px; min-width: 0; }
+.bl { font-family: var(--gothic); text-transform: uppercase; letter-spacing: .1em; font-size: 13.5px; line-height: 1; color: var(--ink-2); margin-right: 1px; }
+.bub { display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px 1px; border: 1.5px solid var(--b-c, var(--ink)); border-radius: 999px; background: var(--b-bg, transparent); color: var(--b-fg, var(--ink)); font: 600 12px/1.5 var(--body); white-space: nowrap; }
+.bub.for { --b-c: var(--blue); --b-bg: var(--blue); --b-fg: var(--on-blue); }
+.bub.send::before { content: "✓"; font-weight: 700; color: var(--red-text); }
+.bub.perk { --b-c: var(--ink-3); border-style: dashed; }
+
+/* ───────────────────────────── Claude's read: four scores and the sentence they rest on */
+.read { margin-top: 8px; padding: 7px 10px 8px; border: 1px solid var(--hair); border-left: 4px solid var(--gold); background: var(--paper); display: grid; gap: 5px; }
+.read-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
+.read-h b { font-family: var(--script); font-weight: 400; font-size: 21px; line-height: 1.1; }
+.read-h a { font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); }
+.meters { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.meter { display: inline-flex; align-items: baseline; gap: 7px; font-family: var(--gothic); text-transform: uppercase; letter-spacing: .08em; font-size: 14.5px; line-height: 1.2; white-space: nowrap; }
+.pips { display: inline-flex; gap: 2px; }
+.pips i { width: 10px; height: 10px; border: 1.5px solid var(--ink); }
+.pips i.on { background: var(--blue); border-color: var(--blue); }
+.meter .na { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0; text-transform: none; color: var(--ink-3); }
+.read-why { margin: 0; font-size: 13px; line-height: 1.4; color: var(--ink-2); overflow-wrap: anywhere; }
 .t-act { display: grid; align-content: center; justify-items: stretch; gap: 7px; padding: 12px 14px; border-left: 1px solid var(--hair); min-width: 132px; }
 .t-act .go { display: block; padding: 8px 10px 6px; background: var(--ink); color: var(--paper); text-align: center; text-decoration: none; font-family: var(--gothic); text-transform: uppercase; letter-spacing: .1em; font-size: 18px; line-height: 1; }
 .t-act .go:hover { background: var(--blue); color: var(--on-blue); }
@@ -278,6 +303,8 @@ details.tbl th { font-weight: 700; }
 .office .who .nm { font: 700 16px/1.25 var(--body); overflow-wrap: anywhere; }
 .office .who .nm a { text-decoration: none; } .office .who .nm a:hover { text-decoration: underline; }
 .office .who .sub { font-family: var(--mono); font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+.office .mid { min-width: 0; display: grid; gap: 6px; }
+.office .mid .bubs { margin-top: 0; }
 .dates { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
 .date { display: inline-flex; align-items: baseline; gap: 6px; padding: 3px 8px 2px; border: 1.5px solid var(--d-c, var(--ink)); font-family: var(--mono); font-size: 12.5px; line-height: 1.3; background: var(--paper-3); }
 .date b { font-family: var(--gothic); font-weight: 400; text-transform: uppercase; letter-spacing: .07em; font-size: 15px; }
@@ -337,6 +364,25 @@ table.src td small { display: block; font-family: var(--mono); font-size: 12px; 
 .fine dt { display: inline; font-family: var(--mono); font-weight: 700; color: var(--ink); }
 .fine dd { display: inline; margin: 0; }
 
+.fine > div { scroll-margin-top: 62px; }
+.legal { margin-top: 30px; padding: 16px 18px 18px; border: 2px solid var(--ink); background: var(--paper-2); scroll-margin-top: 62px; }
+.legal h3 { margin: 0; font-family: var(--gothic); font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: 27px; line-height: 1.05; }
+.legal h3 + h3, .legal .fine + h3 { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--ink); }
+.legal .fine { margin-top: 10px; }
+.legal .rev { margin: 16px 0 0; font-family: var(--mono); font-size: 12.5px; color: var(--ink-2); }
+
+/* ───────────────────────────── the game */
+.game { background: var(--paper-3); border: 1.5px solid var(--ink); box-shadow: 4px 5px 0 var(--shadow); padding: 12px; }
+#game-canvas { display: block; width: 100%; height: 300px; border: 2px solid var(--ink); background: #CFC6B2; cursor: pointer; touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.game-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: 12px; }
+.game-bar .btn { min-width: 104px; justify-content: center; padding: 11px 16px 9px; font-size: 19px; touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.game-status { flex: 1 1 220px; font-family: var(--mono); font-size: 13px; color: var(--ink-2); }
+.stages { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 12px 0 0; padding: 0; list-style: none; border: 1.5px solid var(--ink); }
+.stages li { padding: 7px 10px 6px; border-left: 1.5px solid var(--ink); font-family: var(--mono); font-size: 12px; line-height: 1.35; color: var(--ink-2); }
+.stages li:first-child { border-left: 0; }
+.stages b { display: block; font-family: var(--gothic); font-weight: 400; text-transform: uppercase; letter-spacing: .08em; font-size: 17px; line-height: 1.1; color: var(--ink); }
+.game .note { margin: 10px 0 0; }
+
 footer.colophon { margin-top: 40px; background: var(--ink); color: var(--paper); border-top: 6px solid var(--red); }
 footer.colophon .wrap { padding-block: 24px 30px; display: grid; gap: 8px; }
 footer.colophon .big { font-family: var(--display); text-transform: uppercase; font-size: 26px; line-height: 1; }
@@ -347,11 +393,11 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
 @media (max-width: 860px) {
   .mast-grid { grid-template-columns: minmax(0, 1fr); padding-block: 24px 30px; }
   .pins { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
-  .pin { width: min(100%, 150px); border-width: 4px; }
+  .pin { width: min(100%, 150px); }
   .pin:nth-child(n) { margin-top: 0; }
   .wire { grid-template-columns: minmax(0, 1fr); }
   .office { grid-template-columns: 52px minmax(0, 1fr) auto; }
-  .office .dates { grid-column: 2 / -1; }
+  .office .mid { grid-column: 2 / -1; }
 }
 @media (max-width: 620px) {
   html { scroll-padding-top: 50px; }
@@ -366,10 +412,11 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   .dek { margin-top: 12px; font-size: 15px; line-height: 1.5; }
   .stampline { margin-top: 10px; font-size: 12px; line-height: 1.45; }
   .pins { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0; align-items: start; }
-  .pin, .pin:nth-child(n) { width: auto; aspect-ratio: auto; margin: 0; border: 0; border-radius: 0; background: none; box-shadow: none; transform: none; color: var(--ink); gap: 7px; align-content: start; }
+  .pin, .pin:nth-child(n) { width: auto; aspect-ratio: auto; margin: 0; border-radius: 0; background: none; filter: none; transform: none; color: var(--ink); gap: 7px; align-content: start; }
   .pin-stars { display: none; }
-  .pin-n { width: 66px; height: 66px; border-radius: 50%; display: grid; place-content: center; font-size: 27px; color: var(--pin-fg); border: 3px solid var(--pin-ring); transform: rotate(var(--r));
-    background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .42), rgba(255, 255, 255, 0) 44%), var(--pin-bg); box-shadow: 0 0 0 2px var(--ink), 3px 4px 0 var(--shadow); }
+  .pin-n { width: 70px; height: 70px; display: grid; place-content: center; font-size: 27px; color: var(--pin-fg); transform: rotate(var(--r));
+    background: var(--pin-img) center / 100% 100% no-repeat; filter: drop-shadow(2px 3px 3px var(--pin-shadow)); }
+  .pin:active .pin-n { transform: rotate(var(--r)) scale(.95); }
   .pin-l { font-size: 13.5px; line-height: 1.05; max-width: none; }
   /* section tabs */
   .tabs a { padding: 10px 9px 8px; font-size: 16.5px; letter-spacing: .06em; }
@@ -424,8 +471,23 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   .legend { font-size: 12px; gap: 6px 14px; }
   /* Hill roll and plain rows */
   .office { grid-template-columns: 46px minmax(0, 1fr); gap: 4px 12px; } .office .st { width: 40px; height: 40px; font-size: 18px; }
-  .office .dates, .office .acts { grid-column: 2; justify-content: flex-start; }
+  .office .mid, .office .acts { grid-column: 2; justify-content: flex-start; }
   .office .acts a { padding: 4px 0; }
+  /* bubbles, ratings, notices, game */
+  .bubs { gap: 6px 12px; }
+  .read { padding: 7px 9px 8px; }
+  .read-h b { font-size: 20px; }
+  .meters { display: grid; grid-template-columns: repeat(2, max-content); gap: 5px 20px; }
+  .legal { padding: 13px 13px 15px; scroll-margin-top: 50px; }
+  .legal h3 { font-size: 24px; }
+  .fine > div { scroll-margin-top: 50px; }
+  .game { padding: 8px; }
+  #game-canvas { height: 230px; }
+  .game-bar .btn { flex: 1 1 0; min-width: 0; padding: 14px 10px 12px; font-size: 21px; }
+  .game-status { flex-basis: 100%; }
+  .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stages li:nth-child(3) { border-left: 0; }
+  .stages li:nth-child(n + 3) { border-top: 1.5px solid var(--ink); }
   .field-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   .row { grid-template-columns: minmax(0, 1fr); gap: 2px; } .row .side { text-align: left; white-space: normal; }
   .tape li > a, .tape li > div { grid-template-columns: minmax(4.2em, max-content) minmax(0, 1fr); } .tape .wl { grid-column: 2; }
@@ -443,7 +505,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
       <p class="kicker">Washington, D.C. <span>★</span> Democratic internships <span>★</span> 2027</p>
       <h1 class="title"><span class="t1">The Blue</span><span class="t2">Ticket</span></h1>
       <p class="slogan">Get on it for ’27</p>
-      <p class="dek">Every internship we can find on the Democratic side of Washington: <b>Hill offices</b>, the <b>party committees</b> and their allies. Each run reads the source pages again and records the day an application <b>opens</b> and the day it <b>closes</b>.</p>
+      <p class="dek">Every internship we can find on the Democratic side of Washington: <b>Hill offices</b>, the <b>party committees</b> and their allies, with the <b>nonpartisan</b> institutions and federal agencies listed beside them. Each run reads the source pages again and records the day an application <b>opens</b> and the day it <b>closes</b>.</p>
       <p class="stampline" id="stampline">Reading the last scrape…</p>
     </div>
     <div class="pins" id="pins"></div>
@@ -459,9 +521,11 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
 </div></section>
 
 <section class="dept" id="postings"><div class="wrap">
-  <div class="dept-head"><span class="eyebrow">★ Department of the Present ★</span><h2>Now Hiring</h2><p>Postings that were live on the last scrape, grouped by term: spring, then fall, then summer. Within a term the soonest deadline comes first. Hill postings come from the Senate Employment Office and the House Employment Bulletin; the rest from each organization’s own job board.</p></div>
+  <div class="dept-head"><span class="eyebrow">★ Department of the Present ★</span><h2>Now Hiring</h2><p>Postings that were live on the last scrape, grouped by term: spring, then fall, then summer. Within a term the soonest deadline comes first. Hill postings come from the Senate Employment Office and the House Employment Bulletin, federal announcements from USAJOBS, and the rest from each organization’s own job board. Nonpartisan listings are government and institutional internships, not Democratic ones, and executive-branch roles sit under the current administration.</p></div>
   <div class="ballot" id="p-ballot">
+    <div class="ballot-row" id="f-side"><span class="lbl">Side</span></div>
     <details class="filters" open><summary>Filters</summary>
+    <div class="ballot-row" id="f-level"><span class="lbl">Level</span></div>
     <div class="ballot-row" id="f-desk"><span class="lbl">Desk</span></div>
     <div class="ballot-row" id="f-term"><span class="lbl">Term</span></div>
     <div class="ballot-row" id="f-more"><span class="lbl">Also</span></div>
@@ -500,6 +564,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   <div class="ballot">
     <details class="filters" open><summary>Filters</summary>
     <div class="ballot-row" id="h-chamber"><span class="lbl">Chamber</span></div>
+    <div class="ballot-row" id="h-level"><span class="lbl">Level</span></div>
     <div class="ballot-row" id="h-more"><span class="lbl">Show</span></div>
     </details>
     <div class="ballot-row"><span class="lbl">Find</span><label class="field"><input id="h-search" type="search" placeholder="member or state" aria-label="Search offices"></label><label class="field" style="flex:0 1 230px"><select id="h-state" aria-label="State"><option value="">Every state</option></select></label></div>
@@ -509,7 +574,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
 </div></section>
 
 <section class="dept" id="leads"><div class="wrap">
-  <div class="dept-head"><span class="eyebrow">★ Leads ★</span><h2>The Field</h2><p>The programs that place interns on the Hill, the party committees, and the think tanks, advocacy groups, unions and campaign firms around them. Where an organization has a job board we can read, its intern postings are checked each run.</p></div>
+  <div class="dept-head"><span class="eyebrow">★ Leads ★</span><h2>The Field</h2><p>The programs that place interns on the Hill, the party committees, and the think tanks, advocacy groups, unions and campaign firms around them, followed by Washington’s nonpartisan institutions. Where an organization has a job board we can read, its intern postings are checked each run.</p></div>
   <div class="ballot">
     <details class="filters" open><summary>Filters</summary>
     <div class="ballot-row" id="l-group"><span class="lbl">Kind</span></div>
@@ -520,21 +585,56 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   <div id="l-list"></div>
 </div></section>
 
-<section class="dept" id="federal"><div class="wrap">
-  <div class="dept-head"><span class="eyebrow">★ Civil Service ★</span><h2>Federal, Nonpartisan</h2><p>Student and intern announcements in Washington from USAJOBS, plus Senate postings from offices that serve both parties. These are government internships, not Democratic ones, and executive-branch roles sit under the current administration.</p></div>
-  <div id="fed-list"></div>
+<section class="dept" id="game"><div class="wrap">
+  <div class="dept-head"><span class="eyebrow">★ Recess ★</span><h2>Run for It</h2><p>A break between applications. The donkey runs down the Mall: jump the angry old congressmen, and mind the flying Stephen Millers. The farther you get, the more of Washington is repaired and the greener it grows.</p></div>
+  <div class="game">
+    <canvas id="game-canvas" tabindex="0" role="img" aria-label="Run for It, a running game. A donkey runs past the Capitol and the Washington Monument, jumping congressmen and ducking flying figures. Press Space or tap to start."></canvas>
+    <div class="game-bar">
+      <button class="btn" id="g-jump" type="button">Jump</button>
+      <button class="btn" id="g-duck" type="button">Duck</button>
+      <span class="game-status" id="g-status" role="status" aria-live="polite">Press Space or tap the picture to start.</span>
+    </div>
+    <ol class="stages" aria-label="Stages">
+      <li><b>1. Gridlock</b>from the start</li>
+      <li><b>2. Under Repair</b>at 120 blocks</li>
+      <li><b>3. Ribbon Cutting</b>at 320 blocks</li>
+      <li><b>4. Cherry Blossom Time</b>at 600 blocks</li>
+    </ol>
+    <p class="note">Space, the up arrow or a tap jumps. The down arrow or the Duck button ducks; hold it in the air to drop faster. Esc pauses. A figure flying high can be run under, one in the middle has to be ducked, and a low one has to be jumped. Your best run is kept in this browser. The game is satire: the congressmen are invented.</p>
+  </div>
 </div></section>
 
 <section class="dept" id="sources"><div class="wrap">
   <div class="dept-head"><span class="eyebrow">★ The Fine Print ★</span><h2>How This Is Counted</h2><p>Every figure on this page comes from the sources below, read on the date shown. Check the linked page before you rely on a date.</p></div>
   <div class="scroll-x"><table class="src" id="src-table"></table></div>
   <div class="fine" id="fine"></div>
+
+  <div class="legal" id="legal">
+    <h3>Your privacy</h3>
+    <div class="fine">
+      <div><h4>What this page collects</h4><p>Nothing. There is no sign-up, no form that sends anything anywhere, no advertising, and no analytics or tracking script. The page sets no cookies of its own.</p></div>
+      <div><h4>What stays in your browser</h4><p>The postings and offices you star, and your best run in the game, are saved in this browser’s storage so they are still there on your next visit. They are never sent anywhere. Clearing this site’s data in your browser removes them.</p></div>
+      <div><h4>What leaves your browser</h4><p>The typefaces load from Google Fonts, so Google receives that request and your IP address with it. A link to a posting takes you to that organization’s own site, under its own privacy policy. “+ Google Calendar” opens Google Calendar with the deadline filled in. The CSV file is made in your browser.</p></div>
+      <div><h4>Who hosts it</h4><p>Published as a Claude artifact, this page is served by Anthropic, and Anthropic’s privacy policy covers that hosting. A copy hosted anywhere else is covered by that host’s policy.</p></div>
+      <div><h4>What the scraper gathers</h4><p>Only pages anyone can open without logging in, read by a script that names itself and honors robots.txt when it crawls a site. Listings name members of Congress in their official role and, where an office prints one in its posting, the work address applications go to. Nothing about applicants is gathered. To have an entry corrected or removed, contact whoever runs this copy of the page.</p></div>
+    </div>
+    <h3>Legal notices</h3>
+    <div class="fine">
+      <div><h4>No affiliation</h4><p>The Blue Ticket is an independent project. It is not affiliated with, endorsed by or paid for by the Democratic Party, any party committee, candidate, member of Congress, federal agency or organization listed here. A listing is not an endorsement by either side.</p></div>
+      <div><h4>No guarantee</h4><p>Everything here is read by a script from public pages and can be wrong, incomplete or out of date. It is provided as is, with no warranty of any kind. Confirm every date and requirement on the organization’s own page before you rely on it. Nobody behind this page is responsible for a missed deadline or for a decision made from it.</p></div>
+      <div><h4>Not advice</h4><p>Nothing here is legal, career, financial or immigration advice. Who may apply, including citizenship, work authorization and enrollment rules, is decided by each office, and its posting is the authority.</p></div>
+      <div><h4>The ratings are opinion</h4><p>The scores under “Claude’s read” are estimates written by an AI model from the words of each posting. They are opinion, not fact. They are not based on anyone’s experience of the placement, and they can be wrong. Where a posting does not speak to something, no score is given.</p></div>
+      <div><h4>Names and quoted text</h4><p>Organizations and offices are named only to identify them, and all trademarks belong to their owners. Short passages are quoted from postings to show where a date came from, with a link to the source.</p></div>
+      <div><h4>The game</h4><p>“Run for It” is satire. The congressmen in it are invented and depict no real person. The flying figure is a cartoon of a public official, Stephen Miller, in his public role. Nobody shown has endorsed it.</p></div>
+    </div>
+    <p class="rev">Notices last revised November 13, 2026.</p>
+  </div>
 </div></section>
 </main>
 
 <footer class="colophon"><div class="wrap">
   <div class="big">The Blue Ticket</div>
-  <p>An independent tracker. Not affiliated with, authorized by, or paid for by the Democratic Party, any candidate, or any committee. Dates are read from public pages by a script and can be wrong or out of date: the organization’s own page is the authority.</p>
+  <p>An independent tracker. Not affiliated with, authorized by, or paid for by the Democratic Party, any candidate, or any committee. Dates are read from public pages by a script and can be wrong or out of date: the organization’s own page is the authority. <a href="#legal">Privacy and legal notices</a>.</p>
   <p class="union" id="colophon-meta"></p>
 </div></footer>
 
@@ -682,10 +782,12 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   // ───────────────────────────────────────────────────────── model
   var P = DATA.postings, ORGS = DATA.orgs, OFF = DATA.offices;
   var byId = {}; P.forEach(function (p) { byId[p.id] = p; });
-  var DESKS = { hill: 'The Hill', program: 'Hill programs', party: 'Party & campaigns', think: 'Think tanks', advocacy: 'Advocacy', labor: 'Labor', firm: 'Firms' };
+  var DESKS = { hill: 'The Hill', program: 'Hill programs', party: 'Party & campaigns', think: 'Think tanks', advocacy: 'Advocacy', labor: 'Labor', firm: 'Firms', nphill: 'Hill, nonpartisan', federal: 'Federal agencies', nonpartisan: 'Nonpartisan institutions' };
+  // The last three desks are the nonpartisan side: Hill offices that serve both parties or state none, USAJOBS, and institutions.
+  var NP = { nphill: 1, federal: 1, nonpartisan: 1 };
   function deskOf(p) {
-    if (p.src === 'usajobs') return 'neutral';
-    if (p.src === 'senate' || p.src === 'house') return p.party === 'D' ? 'hill' : 'neutral';
+    if (p.src === 'usajobs') return 'federal';
+    if (p.src === 'senate' || p.src === 'house') return p.party === 'D' ? 'hill' : 'nphill';
     return DESKS[p.group] ? p.group : 'advocacy';
   }
   function pstat(p) {
@@ -693,16 +795,68 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
     if (p.src === 'usajobs' && p.status && !/accepting/i.test(p.status)) return { k: 'closed', n: null };
     return { k: p.rolling ? 'rolling' : 'open', n: null };
   }
-  P.forEach(function (p) { p._desk = deskOf(p); p._st = pstat(p); p._hay = (p.title + ' ' + p.org + ' ' + (p.orgFull || '') + ' ' + (p.st || '') + ' ' + (p.term || '')).toLowerCase(); });
+  P.forEach(function (p) {
+    p._desk = deskOf(p); p._np = !!NP[p._desk]; p._st = pstat(p);
+    p.level = p.level || []; p.needs = p.needs || [];
+    p._hay = (p.title + ' ' + p.org + ' ' + (p.orgFull || '') + ' ' + (p.st || '') + ' ' + (p.term || '')).toLowerCase();
+  });
   var RANK = { last: 0, open: 1, rolling: 2, closed: 3 };
   function byUrgency(a, b) {
     return RANK[a._st.k] - RANK[b._st.k] || (a.dl || '9999').localeCompare(b.dl || '9999') || (b.posted || '').localeCompare(a.posted || '') || a.title.localeCompare(b.title);
   }
-  var demSide = P.filter(function (p) { return p._desk !== 'neutral'; }).sort(byUrgency);
-  var neutral = P.filter(function (p) { return p._desk === 'neutral'; }).sort(byUrgency);
+  var allPosts = P.slice().sort(byUrgency);
+  var demSide = allPosts.filter(function (p) { return !p._np; });
+  var neutral = allPosts.filter(function (p) { return p._np; });
   var live = function (p) { return p._st.k !== 'closed'; };
   var inDC = function (p) { return p.place !== 'elsewhere' && p.place !== 'remote'; };
   var liveDC = function (p) { return live(p) && inDC(p); };
+
+  // ───────────────────────────────────────────────────────── bubbles and ratings
+  // Who a posting says it is for, what it asks applicants to send, and what it says it offers. All read from its own text.
+  var LEVELS = { undergrad: 'Undergrads', grad: 'Grad & law students', recent: 'Recent grads' };
+  var LEVEL_CHIP = { undergrad: 'Undergraduate', grad: 'Graduate & law', recent: 'Recent graduates', none: 'Not stated' };
+  var NEEDS = { resume: 'Résumé', cover: 'Cover letter', writing: 'Writing sample', essay: 'Essay', transcript: 'Transcript', refs: 'References', samples: 'Work samples', video: 'Video', availability: 'Availability dates' };
+  var PERKS = { mentorship: 'Mentorship', 'speaker series': 'Speaker series', 'professional development': 'Training', networking: 'Networking', cohort: 'Intern class', housing: 'Housing', 'course credit': 'Course credit', transit: 'Transit benefit' };
+  function bubbles(level, needs, perks) {
+    var groups = [];
+    function group(label, cls, keys, names, tip) {
+      if (!keys || !keys.length) return;
+      groups.push(h('span', { class: 'bg' }, h('span', { class: 'bl' }, label), keys.map(function (k) { var n = names[k] || k; return h('span', { class: 'bub ' + cls, title: tip + n.toLowerCase() }, n); })));
+    }
+    group('Open to', 'for', level, LEVELS, 'The text says it is open to ');
+    group('Asks for', 'send', needs, NEEDS, 'The text asks applicants for: ');
+    group('Offers', 'perk', perks, PERKS, 'The text mentions: ');
+    return groups.length ? h('div', { class: 'bubs' }, groups) : null;
+  }
+  var levelHit = function (levels, want) { return levels.length ? levels.some(function (l) { return want[l]; }) : !!want.none; };
+  function levelCounts(list, get) {
+    var n = { undergrad: 0, grad: 0, recent: 0, none: 0 };
+    list.forEach(function (x) { var lv = get(x); if (!lv.length) n.none++; lv.forEach(function (l) { n[l]++; }); });
+    return ['undergrad', 'grad', 'recent', 'none'].filter(function (k) { return n[k]; }).map(function (k) { return { v: k, label: LEVEL_CHIP[k], n: n[k] }; });
+  }
+  // Claude's four scores for a posting (data/ratings.json; method in RATING_GUIDE.md). null = the posting does not say.
+  var METERS = [['b', 'Balance', 'Work-life balance'], ['s', 'Social', 'Social side'], ['n', 'Networking', 'Networking'], ['w', 'Hands-on', 'Hands-on work']];
+  function readPanel(r) {
+    if (!r || METERS.every(function (m) { return r[m[0]] == null; })) return null; // nothing to score: say nothing
+    var meters = METERS.map(function (m) {
+      var v = r[m[0]], pips = [];
+      if (v == null) return h('span', { class: 'meter', title: m[2] + ': the posting does not say' }, m[1], h('span', { class: 'na' }, 'not stated'));
+      for (var i = 1; i <= 5; i++) pips.push(h('i', { class: i <= v ? 'on' : null }));
+      return h('span', { class: 'meter', role: 'img', 'aria-label': m[2] + ': ' + v + ' out of 5', title: m[2] + ': ' + v + ' out of 5' }, m[1], h('span', { class: 'pips', 'aria-hidden': 'true' }, pips));
+    });
+    return h('div', { class: 'read' },
+      h('div', { class: 'read-h' }, h('b', { text: 'Claude’s read' }), h('a', { href: '#how-rated' }, h('span', { class: 'lg' }, 'an AI estimate from the posting, not an intern review'), h('span', { class: 'sm' }, 'AI estimate, not a review'))),
+      h('div', { class: 'meters' }, meters),
+      r.why ? h('p', { class: 'read-why', text: r.why }) : null);
+  }
+  function factLine(f) {
+    if (!f) return null;
+    var bits = [];
+    if (f.hours) bits.push(f.hours + ' hrs a week'); else if (f.time) bits.push(f.time);
+    if (f.flex) bits.push('flexible hours');
+    if (f.mode) bits.push(f.mode);
+    return bits.length ? bits.join(' · ') : null;
+  }
 
   var slate = {};
   (store.get('blue-ticket-slate', []) || []).forEach(function (id) { slate[id] = 1; });
@@ -785,6 +939,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
     var seen = {};
     o._w = o.w.map(winView).filter(function (v) { var k = v.term + v.iso; if (v.n < -45 || seen[k]) return false; seen[k] = 1; return true; }).sort(function (a, b) { return a.iso.localeCompare(b.iso); });
     o._next = o._w.filter(function (v) { return v.n >= 0; })[0] || null;
+    o.level = o.level || []; o.needs = o.needs || [];
     o._hay = (o.name + ' ' + o.stn + ' ' + o.st).toLowerCase();
   });
 
@@ -804,23 +959,26 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   ]);
   var m = DATA.meta, ch = DATA.changes;
   var stamp = clear($('#stampline'));
-  add(stamp, ['Last scrape: ', h('b', { text: fmtStamp(m.generatedAt) }), ' · ', demSide.filter(liveDC).length + ' open postings in Washington · ' + officesDated + ' offices with dates on file']);
+  add(stamp, ['Last scrape: ', h('b', { text: fmtStamp(m.generatedAt) }), ' · ', demSide.filter(liveDC).length + ' open postings in Washington on the Democratic side, ' + neutral.filter(liveDC).length + ' nonpartisan or federal · ' + officesDated + ' offices with dates on file']);
   if (ch && ch.since && (ch.fresh.length || ch.pages.length)) add(stamp, [h('br'), 'Since the run before: ', h('b', { text: ch.fresh.length + ' new posting' + (ch.fresh.length === 1 ? '' : 's') }), ', ' + ch.pages.length + ' page' + (ch.pages.length === 1 ? '' : 's') + ' changed']);
   $('#colophon-meta').textContent = 'Scraped ' + fmtStamp(m.generatedAt) + ' · statuses on this page are worked out from today’s date, ' + fmt(TODAY, true) + '.';
   add($('#tabs'), [
     h('a', { href: '#wire' }, h('span', { class: 'lg' }, 'The Wire'), h('span', { class: 'sm' }, 'Wire')),
-    h('a', { href: '#postings' }, h('span', { class: 'lg' }, 'Now Hiring'), h('span', { class: 'sm' }, 'Hiring'), h('b', { text: demSide.filter(liveDC).length })),
+    h('a', { href: '#postings' }, h('span', { class: 'lg' }, 'Now Hiring'), h('span', { class: 'sm' }, 'Hiring'), h('b', { text: allPosts.filter(liveDC).length })),
     h('a', { href: '#calendar' }, 'Calendar'),
     h('a', { href: '#hill' }, h('span', { class: 'lg' }, 'Hill Roll'), h('span', { class: 'sm' }, 'Hill'), h('b', { text: OFF.length })),
     h('a', { href: '#leads' }, h('span', { class: 'lg' }, 'The Field'), h('span', { class: 'sm' }, 'Field'), h('b', { text: ORGS.length })),
-    h('a', { href: '#federal' }, 'Federal', h('b', { text: neutral.filter(live).length })),
-    h('a', { href: '#sources' }, h('span', { class: 'lg' }, 'Fine Print'), h('span', { class: 'sm' }, 'Sources'))
+    h('a', { href: '#game' }, h('span', { class: 'lg' }, 'Run for It'), h('span', { class: 'sm' }, 'Game')),
+    h('a', { href: '#sources' }, h('span', { class: 'lg' }, 'Fine Print'), h('span', { class: 'sm' }, 'Notices'))
   ]);
 
   // ───────────────────────────────────────────────────────── the wire
   (function () {
     var closing = [];
-    demSide.forEach(function (p) { if (p.dl && inDC(p) && p._st.n >= 0 && p._st.n <= 14) closing.push({ iso: p.dl, n: p._st.n, who: p.org, what: p.title, url: p.url, est: false }); });
+    // federal announcements are counted in the footer instead: a week of them would crowd everything else off the tape
+    var soon = function (p) { return p.dl && inDC(p) && p._st.n >= 0 && p._st.n <= 14; };
+    allPosts.forEach(function (p) { if (p._desk !== 'federal' && soon(p)) closing.push({ iso: p.dl, n: p._st.n, who: p.org, what: p.title, url: p.url, est: false }); });
+    var fedSoon = allPosts.filter(function (p) { return p._desk === 'federal' && soon(p); }).length;
     ORGS.forEach(function (o) {
       o._ev.forEach(function (s) {
         if (!s.closes || s.closes.basis === 'posting') return;
@@ -853,7 +1011,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
         h('div', { class: 'tape-foot' }, more > 0 ? 'and ' + more + ' more. ' : '', foot));
     }
     add($('#wire-body'), [
-      tape('Closing', 'next 14 days', closing, 12, 'No deadlines in the next two weeks.', h('span', null, officeSoon + ' Hill offices also have a deadline in the next two weeks: ', h('a', { href: '#hill' }, 'see the roll'), '.')),
+      tape('Closing', 'next 14 days', closing, 12, 'No deadlines in the next two weeks.', h('span', null, officeSoon + ' Hill offices also have a deadline in the next two weeks: ', h('a', { href: '#hill' }, 'see the roll'), '.', fedSoon ? [' So do ' + fedSoon + ' federal announcement' + (fedSoon === 1 ? '' : 's') + ': ', h('a', { href: '#postings' }, 'see Now Hiring'), '.'] : null)),
       tape('Opening', 'next five months', opening, 12, 'No opening dates on file yet.', h('span', null, 'A ~ marks a date estimated from last year or reported second-hand. ', h('a', { href: '#calendar' }, 'Full calendar'), '.'))
     ]);
   })();
@@ -892,12 +1050,16 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
         h('span', { class: 's-left' }, st.n === 0 ? 'today' : st.n === 1 ? 'tomorrow' : st.n > 1 ? st.n + ' days left' : fmtLeft(st.n))];
     } else if (st.k === 'closed') stub = [h('span', { class: 's-word' }, 'Closed'), h('span', { class: 's-left' }, 'under review')];
     else stub = [h('span', { class: 's-top' }, 'No date'), h('span', { class: 's-word' }, st.k === 'rolling' ? 'Rolling' : 'Open'), h('span', { class: 's-left' }, st.k === 'rolling' ? 'apply early' : 'none listed')];
-    var where = p._desk === 'hill' ? (p.chamber === 'senate' ? 'Senate' : 'House') + (p.st ? ' · D-' + p.st + (p.dist && p.dist !== 'At-Large' ? '-' + p.dist : '') : ' · Democratic staff') : (DESKS[p._desk] || (p.src === 'usajobs' ? 'Federal' : 'Senate'));
+    var chamber = p.chamber === 'senate' ? 'Senate' : 'House';
+    var where = p._desk === 'hill' ? chamber + (p.st ? ' · D-' + p.st + (p.dist && p.dist !== 'At-Large' ? '-' + p.dist : '') : ' · Democratic staff')
+      : p._desk === 'nphill' ? chamber + (p.party === 'N' ? ' · nonpartisan office' : ' · party not stated')
+      : p._desk === 'federal' ? 'Federal · nonpartisan' : p._desk === 'nonpartisan' ? 'Nonpartisan' : DESKS[p._desk];
     var isNew = p.fresh || (p.posted && left(p.posted) >= -7) || (ch && ch.since && ch.fresh.indexOf(p.id) >= 0);
     var kick = h('div', { class: 't-kick' }, isNew ? h('span', { class: 'new' }, 'New') : null, p.term ? h('span', { text: p.term }) : null, p.term ? h('span', { class: 'sep', 'aria-hidden': 'true' }, '★') : null, h('span', { text: where }), p.role !== 'internship' ? [h('span', { class: 'sep', 'aria-hidden': 'true' }, '★'), h('span', { text: p.role })] : null);
     var meta = h('div', { class: 't-meta' },
       p.loc ? h('span', { text: p.loc }) : null,
       p.paid !== 'unknown' ? h('span', { class: p.paid === 'paid' ? 'pay' : null }, p.pay && p.paid === 'paid' ? p.pay : PAY[p.paid]) : null,
+      p.src === 'usajobs' ? (p.sum ? h('span', { text: p.sum }) : null) : (factLine(p.facts) ? h('span', { text: factLine(p.facts) }) : null),
       p.posted ? h('span', { text: (p.src === 'house' ? 'In the bulletin of ' : 'Posted ') + fmt(p.posted) }) : null,
       p.ref ? h('span', { text: 'Ref. ' + p.ref }) : null,
       p.email ? h('span', { text: 'Send to ' + p.email }) : null);
@@ -914,24 +1076,27 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
       p.dl && st.n >= 0 ? link(gcal('Deadline: ' + p.title + ' (' + p.org + ')', p.dl, 'Apply: ' + p.url), [h('span', { class: 'lg' }, '+ Google Calendar'), h('span', { class: 'sm' }, '+ Calendar')], 'mini') : null,
       p.src === 'house' && p.srcUrl && p.srcUrl !== p.url ? link(p.srcUrl, 'Bulletin PDF', 'mini') : null,
       save);
-    return h('article', { class: 'ticket k-' + st.k }, h('div', { class: 'stub' }, stub),
-      h('div', { class: 't-body' }, kick, h('h4', { class: 't-title' }, link(p.url, p.title)), h('div', { class: 't-org' }, p.org + (p.orgFull && p.orgFull !== p.org && p.src !== 'senate' && p.src !== 'house' ? ' · ' + p.orgFull : '')), meta, quote), act);
+    return h('article', { class: 'ticket k-' + st.k + (p._np ? ' np' : '') }, h('div', { class: 'stub' }, stub),
+      h('div', { class: 't-body' }, kick, h('h4', { class: 't-title' }, link(p.url, p.title)), h('div', { class: 't-org' }, p.org + (p.orgFull && p.orgFull !== p.org && p.src !== 'senate' && p.src !== 'house' ? ' · ' + p.orgFull : '')), meta, quote,
+        bubbles(p.level, p.needs, p.facts && p.facts.perks), readPanel(p.rate)), act);
   }
 
   var NARROW = window.matchMedia && window.matchMedia('(max-width: 620px)').matches;
   var GCAP = NARROW ? 4 : 8, HGCAP = NARROW ? 5 : 10, LCAP = NARROW ? 3 : 6;
   // on a phone the filter boxes start folded away (the search box stays out)
   if (NARROW) Array.prototype.forEach.call(document.querySelectorAll('details.filters'), function (d) { d.removeAttribute('open'); });
-  var pf = { desk: {}, term: {}, dcOnly: true, paid: false, closed: false, mine: false, q: '', open: {} };
-  var deskCounts = {}; demSide.forEach(function (p) { if (liveDC(p)) deskCounts[p._desk] = (deskCounts[p._desk] || 0) + 1; });
+  var pf = { side: '', desk: {}, term: {}, level: {}, dcOnly: true, paid: false, closed: false, mine: false, q: '', open: {} };
+  var deskCounts = {}; allPosts.forEach(function (p) { if (liveDC(p)) deskCounts[p._desk] = (deskCounts[p._desk] || 0) + 1; });
   var termList = [], termSeen = {};
-  demSide.forEach(function (p) { if (termInfo(p.term) && !termSeen[p.term]) { termSeen[p.term] = 1; termList.push(p.term); } });
+  allPosts.forEach(function (p) { if (termInfo(p.term) && !termSeen[p.term]) { termSeen[p.term] = 1; termList.push(p.term); } });
   termList.sort(function (a, b) { return termRank(a) - termRank(b); });
   function pFiltered() {
-    var q = pf.q.trim().toLowerCase(), anyDesk = Object.keys(pf.desk).length, anyTerm = Object.keys(pf.term).length;
-    return demSide.filter(function (p) {
+    var q = pf.q.trim().toLowerCase(), anyDesk = Object.keys(pf.desk).length, anyTerm = Object.keys(pf.term).length, anyLevel = Object.keys(pf.level).length;
+    return allPosts.filter(function (p) {
+      if (pf.side && (pf.side === 'np') !== p._np) return false;
       if (anyDesk && !pf.desk[p._desk]) return false;
       if (anyTerm && !pf.term[p.term || '']) return false;
+      if (anyLevel && !levelHit(p.level, pf.level)) return false;
       if (pf.dcOnly && (p.place === 'elsewhere' || p.place === 'remote')) return false;
       if (pf.paid && p.paid !== 'paid') return false;
       if (!pf.closed && p._st.k === 'closed') return false;
@@ -950,14 +1115,16 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
         note: function (x) { return x.key === 'other' ? 'year-round roles and postings that name no term' : null; } });
     });
     if (!list.length) host.appendChild(h('div', { class: 'empty' }, pf.mine ? 'Nothing on your slate yet. Use “Save to slate” on any posting.' : 'No postings match. Clear a box above, or include deadlines that just passed.'));
-    add(clear($('#p-tally')), [list.length + (list.length === 1 ? ' posting' : ' postings') + (list.length !== demSide.length ? ' of ' + demSide.length + ' on file' : ''), groups.length > 1 ? [': ', termJumps('p', groups)] : null]);
+    add(clear($('#p-tally')), [list.length + (list.length === 1 ? ' posting' : ' postings') + (list.length !== allPosts.length ? ' of ' + allPosts.length + ' on file' : ''), groups.length > 1 ? [': ', termJumps('p', groups)] : null]);
   }
+  chipSet($('#f-side'), [{ v: '', label: 'Both' }, { v: 'dem', label: 'Democratic side', n: demSide.filter(liveDC).length }, { v: 'np', label: 'Nonpartisan & federal', n: neutral.filter(liveDC).length }], pf, 'side', renderPostings, false);
+  chipSet($('#f-level'), levelCounts(allPosts.filter(liveDC), function (p) { return p.level; }), pf, 'level', renderPostings, true);
   chipSet($('#f-desk'), Object.keys(DESKS).filter(function (k) { return deskCounts[k]; }).map(function (k) { return { v: k, label: DESKS[k], n: deskCounts[k] }; }), pf, 'desk', renderPostings, true);
   chipSet($('#f-term'), termList.map(function (t) { return { v: t, label: t }; }), pf, 'term', renderPostings, true);
   var pm = $('#f-more');
   toggleChip(pm, 'Washington only', pf, 'dcOnly', renderPostings);
   toggleChip(pm, 'Paid only', pf, 'paid', renderPostings);
-  toggleChip(pm, 'Just closed', pf, 'closed', renderPostings, demSide.filter(function (p) { return !live(p); }).length);
+  toggleChip(pm, 'Just closed', pf, 'closed', renderPostings, allPosts.filter(function (p) { return !live(p); }).length);
   toggleChip(pm, 'My slate', pf, 'mine', renderPostings);
   $('#p-search').addEventListener('input', debounce(function () { pf.q = $('#p-search').value; renderPostings(); }));
   renderPostings();
@@ -966,8 +1133,9 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   (function () {
     function cell(v) { v = v == null ? '' : String(v); if (/^[=+\-@\t]/.test(v)) v = "'" + v; return /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
     function csv() {
-      var rows = [['Organization', 'Title', 'Term', 'Deadline', 'Deadline basis', 'Opens', 'Posted', 'Location', 'Pay', 'Type', 'Source', 'Link']];
-      byTerm(pFiltered(), postingTerm).forEach(function (g) { g.items.forEach(function (p) { rows.push([p.org, p.title, p.term, p.dl, p.dl ? (p.dlBasis === 'expiry' ? 'posting comes down' : p.dlBasis === 'board' ? 'job board' : 'stated in posting') : '', p.opens, p.posted, p.loc, p.pay || (p.paid === 'unknown' ? '' : p.paid), p.role, p.src, p.url]); }); });
+      var rows = [['Organization', 'Title', 'Side', 'Term', 'Deadline', 'Deadline basis', 'Opens', 'Posted', 'Location', 'Pay', 'Type', 'Open to', 'Asks for', 'Balance (1-5, AI estimate)', 'Social (1-5, AI estimate)', 'Networking (1-5, AI estimate)', 'Hands-on (1-5, AI estimate)', 'Why (AI estimate)', 'Source', 'Link']];
+      var names = function (keys, map) { return keys.map(function (k) { return map[k] || k; }).join('; '); };
+      byTerm(pFiltered(), postingTerm).forEach(function (g) { g.items.forEach(function (p) { var r = p.rate || {}; rows.push([p.org, p.title, p._np ? 'Nonpartisan' : 'Democratic', p.term, p.dl, p.dl ? (p.dlBasis === 'expiry' ? 'posting comes down' : p.dlBasis === 'board' ? 'job board' : 'stated in posting') : '', p.opens, p.posted, p.loc, p.pay || (p.paid === 'unknown' ? '' : p.paid), p.role, names(p.level, LEVELS), names(p.needs, NEEDS), r.b, r.s, r.n, r.w, r.why, p.src, p.url]); }); });
       return rows.map(function (r) { return r.map(cell).join(','); }).join('\r\n');
     }
     var btn = $('#csv-btn'), flash = $('#csv-flash');
@@ -1106,7 +1274,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   })();
 
   // ───────────────────────────────────────────────────────── Hill roll
-  var hf = { chamber: '', dated: false, mine: false, byState: false, q: '', state: '', open: {} };
+  var hf = { chamber: '', level: {}, dated: false, mine: false, byState: false, q: '', state: '', open: {} };
   $('#hill-dek').textContent = 'Every office of a Democrat, or an independent who caucuses with Democrats: ' + OFF.filter(function (o) { return o.ch === 'S'; }).length + ' senators and ' + OFF.filter(function (o) { return o.ch === 'H'; }).length + ' House members. Each office runs its own program, so the crawler opens each site, finds the internship page and reads the deadlines printed there. ' + OFF.filter(function (o) { return o.found; }).length + ' pages were found; ' + officesDated + ' print a date. An office is listed under each term it prints a deadline for.';
   function officeRow(o, views) {
     var where = (o.ch === 'S' ? 'Senate' : 'House') + ' · ' + (o.party === 'I' ? 'I-' : 'D-') + o.st + (o.ch === 'H' && o.dist && o.dist !== 'At-Large' ? '-' + o.dist : '');
@@ -1121,13 +1289,14 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
     if (o.paid === 'paid') dates.appendChild(h('span', { class: 'tag', title: o.pay || 'The page mentions pay or a stipend' }, 'Paid'));
     return h('div', { class: 'office' + (o.ch === 'S' ? ' sen' : '') }, h('div', { class: 'st', 'aria-hidden': 'true' }, o.st),
       h('div', { class: 'who' }, h('div', { class: 'nm' }, link(o.page || o.url, o.name)), h('div', { class: 'sub' }, where + (o.phone ? ' · ' + o.phone : ''))),
-      dates,
+      h('div', { class: 'mid' }, dates, bubbles(o.level, o.needs, null)),
       h('div', { class: 'acts' }, o.page ? link(o.page, 'Internship page') : link(o.url, 'Office site'), starBtn('office:' + o.id, o.name)));
   }
   function hFiltered() {
-    var q = hf.q.trim().toLowerCase();
+    var q = hf.q.trim().toLowerCase(), anyLevel = Object.keys(hf.level).length;
     return OFF.filter(function (o) {
       if (hf.chamber && o.ch !== hf.chamber) return false;
+      if (anyLevel && !levelHit(o.level, hf.level)) return false;
       if (hf.state && o.st !== hf.state) return false;
       if (hf.dated && !o._next) return false;
       if (hf.mine && !slate['office:' + o.id]) return false;
@@ -1173,6 +1342,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
     add(clear($('#h-tally')), [plural(list.length) + (hf.byState ? ', by state' : ', soonest deadline first'), jumps.length > 1 ? [': ', termJumps('h', jumps)] : null]);
   }
   chipSet($('#h-chamber'), [{ v: '', label: 'Both' }, { v: 'S', label: 'Senate', n: OFF.filter(function (o) { return o.ch === 'S'; }).length }, { v: 'H', label: 'House', n: OFF.filter(function (o) { return o.ch === 'H'; }).length }], hf, 'chamber', renderHill, false);
+  chipSet($('#h-level'), levelCounts(OFF, function (o) { return o.level; }), hf, 'level', renderHill, true);
   var hm = $('#h-more');
   toggleChip(hm, 'Deadline ahead', hf, 'dated', renderHill, OFF.filter(function (o) { return o._next; }).length);
   toggleChip(hm, 'Order by state', hf, 'byState', renderHill);
@@ -1184,8 +1354,8 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   renderHill();
 
   // ───────────────────────────────────────────────────────── the field
-  var GROUPS = [['program', 'Programs that place interns on the Hill'], ['hill', 'Democratic leadership and caucuses'], ['party', 'Party committees and campaign arms'], ['think', 'Think tanks and policy shops'], ['advocacy', 'Advocacy and movement groups'], ['labor', 'Labor'], ['firm', 'Campaign firms: polling, data, media, law'], ['board', 'Job boards and resume banks']];
-  var GSHORT = { program: 'Hill programs', hill: 'Leadership', party: 'Party', think: 'Think tanks', advocacy: 'Advocacy', labor: 'Labor', firm: 'Firms', board: 'Job boards' };
+  var GROUPS = [['program', 'Programs that place interns on the Hill'], ['hill', 'Democratic leadership and caucuses'], ['party', 'Party committees and campaign arms'], ['think', 'Think tanks and policy shops'], ['advocacy', 'Advocacy and movement groups'], ['labor', 'Labor'], ['firm', 'Campaign firms: polling, data, media, law'], ['nonpartisan', 'Nonpartisan institutions: Congress’s own agencies, research centers, civic groups'], ['board', 'Job boards and resume banks']];
+  var GSHORT = { program: 'Hill programs', hill: 'Leadership', party: 'Party', think: 'Think tanks', advocacy: 'Advocacy', labor: 'Labor', firm: 'Firms', nonpartisan: 'Nonpartisan', board: 'Job boards' };
   var lf = { group: {}, active: false, mine: false, q: '', open: {} };
   function leadCard(o) {
     var st = o._stat, items = [];
@@ -1214,6 +1384,7 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
       o.blurb ? h('p', { text: o.blurb }) : null,
       items.length ? h('ul', null, items) : null,
       notes.length && !items.length ? h('p', { text: notes[0] }) : null,
+      o.facts ? bubbles(o.facts.level, o.facts.needs, null) : null,
       links);
   }
   function renderLeads() {
@@ -1251,30 +1422,6 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   }
   window.addEventListener('hashchange', openLeadFromHash);
 
-  // ───────────────────────────────────────────────────────── federal
-  (function () {
-    var host = $('#fed-list'), open = {};
-    var list = neutral.filter(live).concat(neutral.filter(function (p) { return !live(p) && p.dl && left(p.dl) >= -7; }));
-    function fedRow(p) {
-      var st = p._st;
-      return h('div', { class: 'row' },
-        h('div', { class: 'when' + (st.k === 'last' ? ' hot' : '') }, p.dl ? (st.k === 'closed' ? 'Closed ' : 'Closes ') + fmt(p.dl) : 'No date', p.dl && st.n >= 0 ? h('small', { text: fmtLeft(st.n) }) : null),
-        h('div', { class: 'what' }, link(p.url, p.title), h('small', { text: (p.src === 'usajobs' ? p.org : p.orgFull || p.org) + (p.sum && p.src === 'usajobs' ? ' · ' + p.sum : '') })),
-        h('div', { class: 'side' }, p.src === 'usajobs' ? (p.pay || (p.paid === 'unpaid' ? 'Unpaid' : 'USAJOBS')) : (p.party === 'N' ? 'Senate, nonpartisan office' : 'Senate, party not stated')));
-    }
-    function draw() {
-      clear(host);
-      var groups = byTerm(list, postingTerm);
-      groups.forEach(function (g) {
-        groupBlock(host, 'f', g, { boxClass: 'rows', cap: NARROW ? 4 : 8, open: open, single: groups.length === 1, redraw: draw, render: fedRow,
-          count: function (x) { return x.items.length + (x.items.length === 1 ? ' announcement' : ' announcements'); },
-          note: function (x) { return x.key === 'other' ? 'announcements that name no term' : null; } });
-      });
-      if (!list.length) host.appendChild(h('div', { class: 'empty' }, 'No federal student announcements for Washington on the last scrape.'));
-    }
-    draw();
-  })();
-
   // ───────────────────────────────────────────────────────── sources
   (function () {
     var t = $('#src-table');
@@ -1301,7 +1448,13 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
         h('div', null, h('dt', { text: 'Listed until ' }), h('dd', { text: 'The posting gives no deadline; this is the day the Senate site takes it down.' })),
         h('div', null, h('dt', { text: '~ or est. ' }), h('dd', { text: 'Not announced. Estimated from last year’s date or taken from a third-party listing.' })),
         h('div', null, h('dt', { text: 'Term? ' }), h('dd', { text: 'The page gave a deadline without naming a term, so the term is inferred from the date.' })))),
-      h('div', null, h('h4', { text: 'Which side an office is on' }), h('p', { text: 'A Hill posting counts as Democratic when it names a Democratic member, or says so in its text. Postings from Republican offices are left out. Offices that serve both parties, and commissions that do not state a party, are listed under Federal.' })),
+      h('div', null, h('h4', { text: 'Which side an office is on' }), h('p', { text: 'A Hill posting counts as Democratic when it names a Democratic member, or says so in its text. Postings from Republican offices are left out. Offices that serve both parties, and commissions that do not state a party, are on the nonpartisan side of Now Hiring with the federal announcements and the nonpartisan institutions.' })),
+      h('div', { id: 'how-rated' }, h('h4', { text: 'How Claude rates a posting' }), h('p', { text: 'Each posting that comes with a description gets up to four scores from 1 to 5: balance (how much room the schedule leaves), social (how much of an intern class there is), networking (who you would meet) and hands-on (how substantive the work is). Claude reads the posting’s own words, scores them against a written rubric and gives the sentence the scores rest on. Where the posting says nothing, there is no score. These are an AI’s estimates, not reviews from interns. ' + P.filter(function (p) { return p.rate; }).length + ' of ' + P.length + ' postings are rated; federal announcements arrive without a description and are not.' })),
+      h('div', null, h('h4', { text: 'What the bubbles mean' }), h('dl', null,
+        h('div', null, h('dt', { text: 'Open to ' }), h('dd', { text: 'The level the text names: undergraduates, graduate and law students, or recent graduates. Most postings name none; the Level filter files those under “Not stated”.' })),
+        h('div', null, h('dt', { text: 'Asks for ' }), h('dd', { text: 'Materials the text tells applicants to send, such as a résumé, cover letter, writing sample or essay.' })),
+        h('div', null, h('dt', { text: 'Offers ' }), h('dd', { text: 'Things the text says come with the placement, such as mentoring, a speaker series or course credit.' })),
+        h('div', null, h('dt', { text: 'A missing bubble ' }), h('dd', { text: 'means the wording was not matched, not that the item is not needed. Read the posting.' })))),
       h('div', null, h('h4', { text: 'The new Congress' }), h('p', { text: 'The roll lists members now in office. Members elected in November 2026 join it once they are sworn in on January 3, 2027 and the public roster is updated; new offices hire interns quickly, so check back then. Committee Democrats’ sites also move when the majority changes hands.' })),
       h('div', null, h('h4', { text: 'What is not here' }), h('p', { text: 'Sites that turn away automated readers are linked but not checked. Postings that only circulate by email or on subscription lists are not seen. About half of Hill offices print no date at all: for those, ask the office.' })),
       h('div', null, h('h4', { text: 'Your slate' }), h('p', { text: 'Stars and “Save to slate” are kept in this browser only. They do not follow you to another device.' }))
@@ -1309,3 +1462,4 @@ footer.colophon .union { font-family: var(--mono); font-size: 12px; opacity: .7;
   })();
 })();
 </script>
+<script>/*__GAME_JS__*/</script>

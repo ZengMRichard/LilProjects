@@ -6,6 +6,7 @@
  */
 const { fetchJson, fetchText, politeFetch, pool } = require('../lib/http');
 const T = require('../lib/text');
+const S = require('../lib/signals');
 
 function finish(org, source, raw, today) {
   const body = raw.body || '';
@@ -32,6 +33,7 @@ function finish(org, source, raw, today) {
     paid: raw.paid || pay.paid, payNote: raw.payNote || pay.note,
     dept: raw.dept || null,
     summary: T.clip(body, 280),
+    needs: S.requirements(body), level: S.levels(raw.title, body), facts: S.facts(raw.title, body), excerpt: T.clip(body, 1100),
   };
 }
 
